@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Blogsmith
+Description: A two-column, fixed-width blog design.
+Version    : 1.0
+Released   : 20071001
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>It's Empty [Projects]</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!-- start header -->
+<div id="logo">
+	<h1><a href="./index.html">It's Empty</a> [Projects]</h1>
+	<p></p>
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="./index.html">Home</a></li>
+		<li><a href="./music.html">Music</a></li>
+		<li class="current_page_item"><a href="#">Projects</a></li>
+		<li><a href="./firefox.html">Firefox</a></li>
+	</ul>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<div id="page-bg">
+		<div id="latest-post"><img src="images/keyboard.gif" alt="" width="200" height="150" class="right" />
+		</div>
+		<!-- start content -->
+		<div id="content">
+		<div class="post"> 
+			<h2 class="title">Sudoku</h2>
+				<p class="byline"><small>Posted on February 8th, 2008 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>A guest speaker in one of my classes mentioned that he was working on a Sudoku solver in Lisp, and I wanted to 
+					see how hard it would be to create one in Java. Not too hard, as it turned out. This is only an early
+					incarnation, it still has a long way to go, but it solves easy puzzles no problem. Of course it gets much trickier
+					when you have to start guessing and solving test puzzles, but that's what recursion is for. I'll update as I work
+					on this some more. 
+					</p>
+				</div>
+				<p class="links"><a href="code/SudokuMain.java">SudokuMain.java</a></p>
+		</div>
+		<div class="post"> 
+			<h2 class="title">MontyHall</h2>
+				<p class="byline"><small>Posted on February 8th, 2008 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>I created this program to test the odds of the <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall problem</a>. 
+					The process of coding the problem actually led to me understanding why it works the way it does. I coded enough to figure out the 
+					odds of winning by sticking with the original door, and when I went to do the odds of winning by switching I realized that I didn't 
+					have to, as they're simply the opposite of the odds for not switching. It seems obvious once you've figured it out, but lots of 
+					people have trouble with this one. 
+					</p>
+				</div>
+				<p class="links"><a href="code/MontyHallMain.java">MontyHallMain.java</a></p>
+		</div>
+		<div class="post"> 
+			<h2 class="title">CalculusClassSize</h2>
+				<p class="byline"><small>Posted on February 8th, 2008 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>Created to solve a CarTalk <a href="http://www.cartalk.com/content/puzzler/">Puzzler</a>. If half of a class of 1058 students qualify for Calculus, how many equally sized sections are they split up into?
+					Clearly there can only be one answer, so this program looks for the one divisor with modulo 0. The answer is 23 sections of 23 students each.  
+					</p>
+				</div>
+				<p class="links"><a href="code/CalculusClassSizeMain.java">CalculusClassSizeMain.java</a></p>
+		</div>
+		<div class="post"> 
+			<h2 class="title">lastFMStats</h2>
+				<p class="byline"><small>Posted on October 5th, 2007 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>This program displays the type of music that you listen to based on your last.fm top weekly or top overall artists. It uses the last.fm API (really just XML pages that they return) to fetch the top artists for a user, creates a list of the tags that have been applied to those artists, and then displays a tag cloud and a few bar graphs of the information. It is a work in progess. <a href="./images/lastfmstats.png" target="_blank">Screenshot</a>.<br />
+					</p>
+				</div>
+				<p class="links"><a href="./code/lastFMStats.py">lastFMStats.py</a></p>
+		</div>
+			<div class="post">
+				<h2 class="title">GREStudy</h2>
+				<p class="byline"><small>Posted on October 5th, 2007 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>This script is simple flash-card style GRE vocabulary study tool. IT reads a .txt file of words and definitions which I create manually from three different word of the day emails that I get every day. <strike>I would like to update this so that it can parse the emails on its own.</strike></p>
+					<p><b>Update:</b> This has now been updated with another script called <a href="./code/GREGmailParse.py">GREGmailParse.py</a> which retrieves words from a gmail account. It works on the word of the day from Dictionary.com, Mirriam-Webster (almost always), and Peterson's, as long as the emails are marked with the label "GRE Words".  <br />
+					</p>
+				</div>
+				<p class="links"><a href="./code/GREStudy.py">GREStudy.py</a>&nbsp&nbsp&nbsp&nbsp<a href="./code/GREWordsSorted.txt">GREWordsSorted.txt</a>&nbsp&nbsp&nbsp&nbsp<a href="./code/gmailGREParse.py">GREGmailParse.py</a></p>
+			</div>
+			<div class="post">
+				<h2 class="title">MP3Rename</h2>
+				<p class="byline"><small>Posted on October 5th, 2007 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>My MP3's are sorted so that there is a folder for each artist, and then a folder for each album inside that. I used to have multiple-disc sets separated out like "artist\album (CD 1)", "artist\album (CD 2)", etc. I decided to change to one folder for the whole album and do "artist\album (2x)" and name the tracks 101, 102, 103, ... 201, 202, 203, etc. This script does that for me.<br />
+					</p>
+				</div>
+				<p class="links"><a href="./code/MP3Rename.py">MP3Rename.py</a></p>
+			</div>
+			<div class="post">
+				<h2 class="title">scheduleSort</h2>
+				<p class="byline"><small>Posted on October 5th, 2007 by <a href="">Ethan</a></small></p>
+				<div class="entry">
+					<p>Every semester we get an Excel file that tells us when the classrooms are in use, so we know when we can work on them. It comes sorted by room number, but that's it. This script redoes the file so that there is an entry for each day for each room, and the classes on each day are sorted by start time. It makes it much easier to tell at a glance whether a room is in use.</p>
+					<p>Because this was just a quick fix, I didn't bother figuring out how to read/write .xls format from Python. The original file needs to be exported to a comma separated (.csv) document, and the output file is the same format.<br />
+					</p>
+				</div>
+				<p class="links"><a href="./code/scheduleSort.py">scheduleSort.py</a></p>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebar -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Code</h2>
+					<ul>
+						<li><a href="code/lastFMStats.py">lastFMStats</li>
+						<li><a href="code/GREStudy.py">GREStudy.py
+						    <a href="code/GREWordsSorted.txt">GREWordsSorted.txt</a>
+							<a href="code/GREGmailParse.py">GREGmailParse.py</a></li>
+						<li><a href="code/MP3Rename.py">MP3Rename.py</li>
+						<li><a href="code/scheduleSort.py">scheduleSort.py</a></li>
+						<li><a href="code/CalculusClassSizeMain.java">CalculusClassSizeMain.java</a></li>
+						<li><a href="code/MontyHallMain.java">MontyHallMain.java</a></li>
+						<li><a href="code/SudokuMain.java">SudokuMain.java</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Links</h2>
+					<p><a href="http://www.python.org"><img src="images/python-logo.gif" height='30'/></a></p>
+					<p><a href="http://www.djangoproject.com/"><img src="images/django-logo.png" height='20'/></a></p>
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
+<!-- end page -->
+<div id="footer">
+	<p>&copy;2007 All Rights Reserved. &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+	_uacct = "UA-2867556-1";
+	urchinTracker();
+</script>
+</body>
+</html>
