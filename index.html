@@ -41,12 +41,83 @@ Released   : 20071001
 		<div id="content">
 		
 			<div class="post"> 
+				<h2 class="title">NCDC Normals Access</h2>
+				<p class="byline"><small>JavaScript (jQuery) - D3.js (xCharts)<br />
+          <a href="http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/climate-normals/1981-2010-normals-data">NCDC > 1981-2010 Normals Data Access</a></small></p>
+				<div class="entry">
+          <p>
+          One of our scientists wanted an easy way to access Normals data, so I worked up this visualization which ended up being very popular. 
+          It's running on top of the CDO web service, and uses jQuery promises and 
+          deferred objects to manage multiple asynchronous requests. 
+          </p>
+				</div>
+			</div>
+
+			<div class="post"> 
+				<h2 class="title">NCDC Historical Observational Metadata Repository (HOMR)</h2>
+				<p class="byline"><small>Spring - Oracle - iBatis - JavaScript (jQuery) - rGraph<br />
+        <a href="http://www.ncdc.noaa.gov/homr">NCDC > HOMR</a><br />
+        <a href="http://www.ncdc.noaa.gov/homr/api">NCDC > HOMR API</a></small></p>
+				<div class="entry">
+          <p>
+          This is NCDC's station metadata access system, for which I am the sole developer. This is a standard Spring app using iBatis mappings into an Oracle database to serve a RESTful web service.
+          The metadata search and visualizations are built on this service, and are presented as a single-page app. rGraph was inherited from the previous developer. 
+          </p>
+				</div>
+			</div>
+
+			<div class="post"> 
+				<h2 class="title">Friendly Library</h2>
+				<p class="byline"><small>Groovy - Grails - JavaScript - Angular - Postgres<br />
+				<a href="http://github.com/someguy235/friendlibrary">GitHub > someguy235 > FriendLibrary</a></small></p>
+				<div class="entry">
+          <p>FrindlyLib (or whatever it's called now) let's people create a catalog of their book, movies, and other physical media, and keep track of them 
+          when they're loaned out. Users can also search among their friends for items they want to borrow. I've used this project to learn a few technologies, so 
+          it's kind of a mess and never finished. 
+          </p>
+				</div>
+			</div>
+
+			<div class="post"> 
+				<h2 class="title">Asheville Transit Mobile</h2>
+				<p class="byline"><small>Javascript - Google Maps API - Bootstrap - Groovy<br />
+				<a href="http://github.com/someguy235/asheville-transit">GitHub > someguy235 > Asheville-Transit</a></small></p>
+				<div class="entry">
+          <p>I did a mobile first redesign of the Asheville Transit website, including an interactive route map, for a class I took. It uses some Groovy scripts 
+          to assemble the route files into kml format. Try it <a href="asheville-transit">here</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="post"> 
+				<h2 class="title">Mission Hospital Touch Kiosk</h2>
+				<p class="byline"><small>Javascript (jQuery) - Twitter Bootstrap<br />
+				<a href="http://github.com/someguy235/mission-touch">GitHub > someguy235 > Mission-Touch</a></small></p>
+				<div class="entry">
+          <p>Designed and built an interface for a touchscreen kiosk at Mission Hospital. Includes some Python to make a JSON file from a database dump of donor info, 
+          a Bootstrap layout, some jQuery transitions and interactions, and some parallax effect on the timeline. Not public until it's released.
+          </p>
+				</div>
+			</div>
+
+			<div class="post"> 
+				<h2 class="title">Coursera Hangman</h2>
+				<p class="byline"><small>Javascript (jQuery) - Raphael - Bootstrap - Grails<br />
+				<a href="http://github.com/someguy235/coursera-hangman">GitHub > someguy235 > Cousera-Hangman</a></small></p>
+				<div class="entry">
+          <p>I did a little hangman app for a Coursera interview. It started as a Grails app, but ended up just using JavaScript for everything. I used RaphaelJS for the graphics,
+          and had to interact with their JSONP web service. Not public in case you're applying for the job too ;)
+					</p>
+				</div>
+			</div>
+
+			<div class="post"> 
 				<h2 class="title">Last.fm Tag Stats</h2>
 				<p class="byline"><small>Python - Tk - Grails - Groovy - HSQLDB - GUI - XML - Last.fm API<br />
 				<a href="http://github.com/someguy235/lastFMGenreStats">GitHub > someguy235 > lastFMGenreStas</a> (new) <br />
 				<a href="http://github.com/someguy235/lastFMStats">GitHub > someguy235 > lastFMStats</a> (old)</small></p>
 				<div class="entry">
-					<p>I originally wrote this as a Python desktop app, but migrated it to Grails. It gathers tag info for a Last.fm user's top artists and displays some trend stats. Try it out <a href="lastFMGenreStats">here</a>. 
+          <p>I originally wrote this as a Python desktop app, but migrated it to Grails. It gathers tag info for a Last.fm user's top artists and displays some trend stats. <!--Try it out <a href="lastFMGenreStats">here</a>-->. 
 					
 					</p>
 				</div>
@@ -69,7 +140,7 @@ Released   : 20071001
 						something back from them.
 					</p>
 					<p>
-						Check it out <a href="dailyMileCalendar">here</a>. 
+          <!--Check it out <a href="dailyMileCalendar">here</a>.--> 
 					
 					</p>
 				</div>
@@ -135,10 +206,6 @@ Released   : 20071001
 			<h2></h2>
 			<a href="http://www.linkedin.com/pub/ethan-shepherd/13/629/135"><img height="30px" width="30px" src="images/linkedin.jpeg" title="LinkedIn" alt="LinkedIn"></img></a>
 			<a href="http://github.com/someguy235"><img height="30px" width="60px" src="images/github.png" title="GitHub" alt="GitHub"></img></a>
-			<a href="http://www.last.fm/user/Who_Am_I"><img height="30px" width="30px" src="images/lastfm.png" title="Last.fm" alt="Last.fm"></img></a>
-			<a href="http://www.dailymile.com/people/who_am_i#ref=tophd"><img height="30px" width="30px" src="images/dailymile.png" title="DailyMile" alt="DailyMile"></img></a>
-			<a href="images"><img height="30px" width="30px" src="images/images.png" title="Images" alt="Images"></img</a>
-			<a href="tabs"><img height="30px" width="30px" src="images/tabs.png" title="Tabs" alt="Tabs"></img></a>
 		</div>
 		<!-- end sidebar -->
 		<div style="clear: both;">&nbsp;</div>
