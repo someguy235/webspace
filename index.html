@@ -1,236 +1,230 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E.Shepherd [@Home]</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>@Home <small>Ethan Shepherd</small></h1>
+        </div>
+      </div>
+      <div class="row">
 
-Name       : Blogsmith
-Description: A two-column, fixed-width blog design.
-Version    : 1.0
-Released   : 20071001
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row post"> 
+            <h2 class="title"><a href="avlcrime">Asheville Crime Mapper</a></h2>
+            <p class="byline"><small>Angular.js - Node.js - Leaflet.js - MongoDB - Bootstrap<br />
+            <a href="http://github.com/someguy235/avlcrime">GitHub > someguy235 > AvlCrime</a></small></p>
+            <div class="row">
+              <img src="resources/images/avlcrime.png" alt="avlcrime screenshot" class="img-responsive img-rounded">
+            </div>
+            <div class="row entry">
+              <p>
+                I used some of Asheville's <a href="http://opendatacatalog.ashevillenc.gov/">open city data</a> to map crime information. Data is pulled from the city data web
+                service, and stored locally to a mondgodb instance before being displayed using lefalet.js/heatmap.js.
+              </p>
+            </div>
+          </div>
 
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="google-site-verification" content="tWh6E6XbmteLX8Zsk-H0E171F2PNFbmMNorcXFbG_Q0" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>E.Shepherd [@Home]</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
-</head>
-<body>
-<!-- start header -->
-<div id="logo">
-	<h1><a href="#">E.Shepherd [@Home]</a></h1>
-	<p></p>
-</div>
-<div id="menu">
-	<ul>
-		<li class="current_page_item"><a href="#">Home</a></li>
-		<!-- <li><a href="./music.html">Music</a></li>
-		<li><a href="./projects.html">Projects</a></li>
-		<li><a href="./firefox.html">Firefox</a></li>
-		-->
-	</ul>
-</div>
-<!-- end header -->
-<!-- start page -->
-<div id="page">
-	<div id="page-bg">
-		<div id="content">
-		
-			<div class="post"> 
-        <h2 class="title"><a href="avlcrime">Asheville Crime Mapper</a></h2>
-				<p class="byline"><small>Angular.js - Node.js - Leaflet.js - MongoDB - Bootstrap<br />
-        <a href="http://github.com/someguy235/avlcrime">GitHub > someguy235 > AvlCrime</a></small></p>
-				<div class="entry">
-          <p>
-            I used some of Asheville's <a href="http://opendatacatalog.ashevillenc.gov/">open city data</a> to map crime information. Data is pulled from the city data web
-            service, and stored locally to a mondgodb instance before being displayed using lefalet.js/heatmap.js.
-          </p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title"><a href="http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/climate-normals/1981-2010-normals-data">NCDC Normals Access</a></h2>
+            <p class="byline"><small>JavaScript (jQuery) - D3.js (xCharts)<br /></small>
+            <div class="entry">
+              <p>
+              One of our scientists wanted an easy way to access Normals data, so I worked up this visualization which ended up being very popular. 
+              It's running on top of the CDO web service, and uses jQuery promises and 
+              deferred objects to manage multiple asynchronous requests. 
+              </p>
+            </div>
+          </div>
+          
+          <div class="row post"> 
+            <h2 class="title"><a href="http://www.ncdc.noaa.gov/homr">NCDC Historical Observational Metadata Repository (HOMR)</a> / <a href="http://www.ncdc.noaa.gov/homr/api">HOMR API</a></h2>
+            <p class="byline"><small>Spring - Oracle - iBatis - JavaScript (jQuery) - rGraph<br /></small>
+            <div class="entry">
+              <p>
+              This is NCDC's station metadata access system, for which I am the sole developer. This is a standard Spring app using iBatis mappings into an Oracle database to serve a RESTful web service.
+              The metadata search and visualizations are built on this service, and are presented as a single-page app. rGraph was inherited from the previous developer. 
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-        <h2 class="title"><a href="http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/climate-normals/1981-2010-normals-data">NCDC Normals Access</a></h2>
-        <p class="byline"><small>JavaScript (jQuery) - D3.js (xCharts)<br /></small>
-				<div class="entry">
-          <p>
-          One of our scientists wanted an easy way to access Normals data, so I worked up this visualization which ended up being very popular. 
-          It's running on top of the CDO web service, and uses jQuery promises and 
-          deferred objects to manage multiple asynchronous requests. 
-          </p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title">Friendly Library</h2>
+            <p class="byline"><small>Groovy - Grails - JavaScript - Angular - Postgres<br />
+            <a href="http://github.com/someguy235/friendlibrary">GitHub > someguy235 > FriendLibrary</a></small></p>
+            <div class="entry">
+              <p>FrindlyLib (or whatever it's called now) let's people create a catalog of their book, movies, and other physical media, and keep track of them 
+              when they're loaned out. Users can also search among their friends for items they want to borrow. I've used this project to learn a few technologies, so 
+              it's kind of a mess and never finished. 
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-        <h2 class="title"><a href="http://www.ncdc.noaa.gov/homr">NCDC Historical Observational Metadata Repository (HOMR)</a> / <a href="http://www.ncdc.noaa.gov/homr/api">HOMR API</a></h2>
-        <p class="byline"><small>Spring - Oracle - iBatis - JavaScript (jQuery) - rGraph<br /></small>
-				<div class="entry">
-          <p>
-          This is NCDC's station metadata access system, for which I am the sole developer. This is a standard Spring app using iBatis mappings into an Oracle database to serve a RESTful web service.
-          The metadata search and visualizations are built on this service, and are presented as a single-page app. rGraph was inherited from the previous developer. 
-          </p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title"><a href="asheville-transit">Asheville Transit Mobile</a></h2>
+            <p class="byline"><small>Javascript - Google Maps API - Bootstrap - Groovy<br />
+            <a href="http://github.com/someguy235/asheville-transit">GitHub > someguy235 > Asheville-Transit</a></small></p>
+            <div class="entry">
+              <p>I did a mobile first redesign of the Asheville Transit website, including an interactive route map, for a class I took. It uses some Groovy scripts 
+              to assemble the route files into kml format.
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-				<h2 class="title">Friendly Library</h2>
-				<p class="byline"><small>Groovy - Grails - JavaScript - Angular - Postgres<br />
-				<a href="http://github.com/someguy235/friendlibrary">GitHub > someguy235 > FriendLibrary</a></small></p>
-				<div class="entry">
-          <p>FrindlyLib (or whatever it's called now) let's people create a catalog of their book, movies, and other physical media, and keep track of them 
-          when they're loaned out. Users can also search among their friends for items they want to borrow. I've used this project to learn a few technologies, so 
-          it's kind of a mess and never finished. 
-          </p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title"><a href="lastfm">Last.fm Tag Stats</a></h2>
+            <p class="byline"><small>Angular.js - Node.js - D3.js - Mongodb - Last.fm API - Bootstrap - <strike>Groovy</strike> - <strike>Grails</strike> - <strike>Python</strike><br />
+            <a href="http://github.com/someguy235/lastfm">GitHub > someguy235 > lastfm</a></small></p>
+            <div class="entry">
+              <p>I originally wrote this as a Python desktop app, but migrated it to Grails, and then Angular/Node. It gathers tag info for a Last.fm user's top artists 
+              and displays some trend stats.
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-        <h2 class="title"><a href="asheville-transit">Asheville Transit Mobile</a></h2>
-				<p class="byline"><small>Javascript - Google Maps API - Bootstrap - Groovy<br />
-				<a href="http://github.com/someguy235/asheville-transit">GitHub > someguy235 > Asheville-Transit</a></small></p>
-				<div class="entry">
-          <p>I did a mobile first redesign of the Asheville Transit website, including an interactive route map, for a class I took. It uses some Groovy scripts 
-          to assemble the route files into kml format.
-					</p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title">Mission Hospital Touch Kiosk</h2>
+            <p class="byline"><small>Javascript (jQuery) - Twitter Bootstrap<br />
+            <a href="http://github.com/someguy235/mission-touch">GitHub > someguy235 > Mission-Touch</a></small></p>
+            <div class="entry">
+              <p>Designed and built an interface for a touchscreen kiosk at Mission Hospital. Includes some Python to make a JSON file from a database dump of donor info, 
+              a Bootstrap layout, some jQuery transitions and interactions, and some parallax effect on the timeline. Not public until it's released.
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-        <h2 class="title"><a href="lastfm">Last.fm Tag Stats</a></h2>
-        <p class="byline"><small>Angular.js - Node.js - D3.js - Mongodb - Last.fm API - Bootstrap - <strike>Groovy</strike> - <strike>Grails</strike> - <strike>Python</strike><br />
-				<a href="http://github.com/someguy235/lastfm">GitHub > someguy235 > lastfm</a></small></p>
-				<div class="entry">
-          <p>I originally wrote this as a Python desktop app, but migrated it to Grails, and then Angular/Node. It gathers tag info for a Last.fm user's top artists 
-          and displays some trend stats.
-					</p>
-				</div>
-			</div>
-			
-			<div class="post"> 
-				<h2 class="title">Mission Hospital Touch Kiosk</h2>
-				<p class="byline"><small>Javascript (jQuery) - Twitter Bootstrap<br />
-				<a href="http://github.com/someguy235/mission-touch">GitHub > someguy235 > Mission-Touch</a></small></p>
-				<div class="entry">
-          <p>Designed and built an interface for a touchscreen kiosk at Mission Hospital. Includes some Python to make a JSON file from a database dump of donor info, 
-          a Bootstrap layout, some jQuery transitions and interactions, and some parallax effect on the timeline. Not public until it's released.
-          </p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title">Coursera Hangman</h2>
+            <p class="byline"><small>Javascript (jQuery) - Raphael - Bootstrap - Grails<br />
+            <a href="http://github.com/someguy235/coursera-hangman">GitHub > someguy235 > Cousera-Hangman</a></small></p>
+            <div class="entry">
+              <p>I did a little hangman app for a Coursera interview. It started as a Grails app, but ended up just using JavaScript for everything. I used RaphaelJS for the graphics,
+              and had to interact with their JSONP web service. Not public in case you're applying for the job too ;)
+              </p>
+            </div>
+          </div>
 
-			<div class="post"> 
-				<h2 class="title">Coursera Hangman</h2>
-				<p class="byline"><small>Javascript (jQuery) - Raphael - Bootstrap - Grails<br />
-				<a href="http://github.com/someguy235/coursera-hangman">GitHub > someguy235 > Cousera-Hangman</a></small></p>
-				<div class="entry">
-          <p>I did a little hangman app for a Coursera interview. It started as a Grails app, but ended up just using JavaScript for everything. I used RaphaelJS for the graphics,
-          and had to interact with their JSONP web service. Not public in case you're applying for the job too ;)
-					</p>
-				</div>
-			</div>
+          <div class="row post"> 
+            <h2 class="title"><a href="dailymile">DailyMile Calendar</a></h2>
+            <p class="byline"><small>Grails - Groovy - JavaScript - HSQLDB - GUI - XML - DailyMile.com API<br />
+            <a href="http://github.com/someguy235/dailyMileCalendar">GitHub > someguy235 > dailyMileCalendar</a></small><br />
+            <div class="entry">
+              <p>I wanted to be able to view <a href="http://www.dailymile.com/">DailyMile</a> entries one month at a time, 
+                but they don't offer that feature. I used
+                the jQuery plugin <a href="http://arshaw.com/fullcalendar/">FullCalendar</a> to create my own view. This is
+                a work in progress.
+              </p>
+              <p> 
+                Unfortunately, the DailyMile API is kind of broken right now: The only date info returned for an event is the
+                date that it was posted to the site, not the date that it actually took place. So lots of events show up on the
+                wrong day, which makes this whole thing kind of pointless. I've stopped working on this until I hear 
+                something back from them.
+              </p>
+              <p>
+              
+              </p>
+            </div>
+          </div>
+          
+          <div class="row post"> 
+            <h2 class="title">Robot Race</h2>
+            <p class="byline"><small>Java - Swing - GUI - I/O - Graphics<br />
+            <a href="http://github.com/someguy235/robotRace">GitHub > someguy235 > robotRace</a></small></p>
+            <div class="entry">
+              <p>Java/Swing implementation of the Robo-Rally board game by Wizard of the Coast. My undergraduate senior project.</p>
+            </div>
+          </div>
+          
+          <div class="row post"> 
+            <h2 class="title">Sudoku Solver</h2>
+            <p class="byline"><small>Java<br />
+            <a href="http://github.com/someguy235/sudoku-solver">GitHub > someguy235 > sudoku-solver</a></small></p>
+            <div class="entry">
+              <p>Sudoku solver in Java, from a few years ago.</p>
+            </div>
+          </div>
+                
+          <div class="row post">
+            <h2 class="title">Scripts</h2>
+            <p class="byline"><small>Java - Python - I/O - GMail API<br />
+            <a href="http://github.com/someguy235/Scripts">GitHub > someguy235 > Scripts</a></small></p>
+            <div class="entry">
+              <ul>
+                <li>
+                  <a href="http://github.com/someguy235/Scripts/blob/master/scheduleSort.py">Schedule Sort</a>
+                  : Takes an Excel sheet sorted by room number and creates a schedule for when rooms are available.
+                </li>
+                <br />
+                <li>
+                  <a href="http://github.com/someguy235/Scripts/blob/master/GREGmailParse.py">GRE GMail</a> /
+                  <a href="http://github.com/someguy235/Scripts/blob/master/GREStudy.py">GRE Study</a>
+                  : Harvests GRE word-of-the-day emails, and stores them for studying. Includes basic CLI quizzing functionality.
+                </li>
+                <br />
+                <li>
+                  <a href="http://github.com/someguy235/Scripts/blob/master/MP3Rename.py">MP3 Rename</a>
+                  : Used this for reorganizing my music collection. Changes directory structure for multiple-disc albums.
+                </li>
+                <br />
+                <li>
+                  <a href="http://github.com/someguy235/Scripts/blob/master/CalculusClassSizeMain.java">Class Size</a> /
+                  <a href="http://github.com/someguy235/Scripts/blob/master/onesMain.java">Ones</a>
+                  : Couple of CarTalk puzzlers.
+                </li>
+                <br />
+                <li>
+                  <a href="http://github.com/someguy235/Scripts/blob/master/MontyHallMain.java">Monty Hall</a>
+                  : Demo of the logic behind the Monty Hall problem. It clicked for me about halfway through writing this one.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-			<div class="post"> 
-        <h2 class="title"><a href="dailymile">DailyMile Calendar</a></h2>
-				<p class="byline"><small>Grails - Groovy - JavaScript - HSQLDB - GUI - XML - DailyMile.com API<br />
-				<a href="http://github.com/someguy235/dailyMileCalendar">GitHub > someguy235 > dailyMileCalendar</a></small><br />
-				<div class="entry">
-					<p>I wanted to be able to view <a href="http://www.dailymile.com/">DailyMile</a> entries one month at a time, 
-						but they don't offer that feature. I used
-						the jQuery plugin <a href="http://arshaw.com/fullcalendar/">FullCalendar</a> to create my own view. This is
-						a work in progress.
-					</p>
-					<p> 
-						Unfortunately, the DailyMile API is kind of broken right now: The only date info returned for an event is the
-						date that it was posted to the site, not the date that it actually took place. So lots of events show up on the
-						wrong day, which makes this whole thing kind of pointless. I've stopped working on this until I hear 
-						something back from them.
-					</p>
-					<p>
-					
-					</p>
-				</div>
-			</div>
-			
-			<div class="post"> 
-				<h2 class="title">Robot Race</h2>
-				<p class="byline"><small>Java - Swing - GUI - I/O - Graphics<br />
-				<a href="http://github.com/someguy235/robotRace">GitHub > someguy235 > robotRace</a></small></p>
-				<div class="entry">
-					<p>Java/Swing implementation of the Robo-Rally board game by Wizard of the Coast. My undergraduate senior project.</p>
-				</div>
-			</div>
-			
-			<div class="post"> 
-				<h2 class="title">Sudoku Solver</h2>
-				<p class="byline"><small>Java<br />
-				<a href="http://github.com/someguy235/sudoku-solver">GitHub > someguy235 > sudoku-solver</a></small></p>
-				<div class="entry">
-					<p>Sudoku solver in Java, from a few years ago.</p>
-				</div>
-			</div>
-						
-			<div class="post">
-				<h2 class="title">Scripts</h2>
-				<p class="byline"><small>Java - Python - I/O - GMail API<br />
-				<a href="http://github.com/someguy235/Scripts">GitHub > someguy235 > Scripts</a></small></p>
-				<div class="entry">
-					<ul>
-						<li>
-							<a href="http://github.com/someguy235/Scripts/blob/master/scheduleSort.py">Schedule Sort</a>
-							: Takes an Excel sheet sorted by room number and creates a schedule for when rooms are available.
-						</li>
-						<br />
-						<li>
-							<a href="http://github.com/someguy235/Scripts/blob/master/GREGmailParse.py">GRE GMail</a> /
-							<a href="http://github.com/someguy235/Scripts/blob/master/GREStudy.py">GRE Study</a>
-							: Harvests GRE word-of-the-day emails, and stores them for studying. Includes basic CLI quizzing functionality.
-						</li>
-						<br />
-						<li>
-							<a href="http://github.com/someguy235/Scripts/blob/master/MP3Rename.py">MP3 Rename</a>
-							: Used this for reorganizing my music collection. Changes directory structure for multiple-disc albums.
-						</li>
-						<br />
-						<li>
-							<a href="http://github.com/someguy235/Scripts/blob/master/CalculusClassSizeMain.java">Class Size</a> /
-							<a href="http://github.com/someguy235/Scripts/blob/master/onesMain.java">Ones</a>
-							: Couple of CarTalk puzzlers.
-						</li>
-						<br />
-						<li>
-							<a href="http://github.com/someguy235/Scripts/blob/master/MontyHallMain.java">Monty Hall</a>
-							: Demo of the logic behind the Monty Hall problem. It clicked for me about halfway through writing this one.
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- end content -->
-		<!-- start sidebar -->
-		<div id="sidebar">
-			<h2></h2>
-			<a href="http://www.linkedin.com/pub/ethan-shepherd/13/629/135"><img height="30px" width="30px" src="images/linkedin.jpeg" title="LinkedIn" alt="LinkedIn"></img></a>
-			<a href="http://github.com/someguy235"><img height="30px" width="60px" src="images/github.png" title="GitHub" alt="GitHub"></img></a>
-		</div>
-		<!-- end sidebar -->
-		<div style="clear: both;">&nbsp;</div>
-	</div>
-</div>
-<!-- end page -->
-<div id="footer">
-	<p>&copy;2007 All Rights Reserved. &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
-</div>
-<script >
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+          <div class="row">
+            <div class="well">
+              <img src="resources/images/profile.jpg" alt="profile pic" class="img-responsive img-rounded">
+              <br />
+              Hi, I'm Ethan Shepherd, a developer building web and science data applications in Asheville, NC. This page is a collection of the projects that I've
+              worked on, either for my job or to learn something new. I'm available for small to medium sized projects, especially involving front-end JavaScript. If 
+              you're interested, get in touch: <a href="mailto:ethan.m.shepherd@gmail.com">ethan.m.shepherd@gmail.com</a>.
+            </div> 
+          </div>
+          <div class="row">
 
-  ga('create', 'UA-45059432-1', 'ethanshepherd.com');
-  ga('send', 'pageview');
+          </div>
+        </div>
+      </div>
+    </div>
 
-</script>
-</body>
+
+
+
+
+
+
+
+
+    
+    <script src="resources/js/jquery-1.7.1.min.js" type="text/javascript" />
+    <script src="resources/js/bootstrap.min.js" type="text/javascript" />
+    <script >
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45059432-1', 'ethanshepherd.com');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
