@@ -1,0 +1,43 @@
+h1{
+  color: #efefef;
+}
+body{
+  background-image: url("../images/squairy_light.png");
+}
+.page-header{
+  padding-top: 10em;
+  background-image: url("../images/rocks.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.header h1{
+  background-color: #333;
+}
+.page-header{
+  margin-top: 0;
+}
+.post{
+  padding: 1em;
+  padding-bottom: 2em;
+  border-bottom: 1px dotted #666;
+}
+.screenshot{ 
+  margin: auto;
+  margin-bottom: 1em;
+  width: 90%;
+}
+#badges{
+  text-align: center;
+}
+#badges a{
+  margin: 5px 5px 0 5px;
+}
+.tagcloud{
+  text-align: center;
+}
+#cloud{
+  margin-top: 24px;
+}
+#cloud span{
+  margin: 0px 5px 0 5px;
+}
