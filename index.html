@@ -33,8 +33,8 @@
             </div>
             <div class="row entry">
               <p>
-                I used some of Asheville's <a href="http://opendatacatalog.ashevillenc.gov/">open city data</a> to map crime information. Data is pulled from the city data web
-                service, and stored locally to a mondgodb instance before being displayed using lefalet.js/heatmap.js.
+                I used some of Asheville's <a href="http://opendatacatalog.ashevillenc.gov/">open city data</a> to map crime information for the area. Data is pulled from the city data web
+                service, and stored locally to a mondgodb instance. It's then displayed interactively using lefalet.js/heatmap.js.
               </p>
             </div>
           </div>
@@ -48,8 +48,8 @@
             <div class="entry">
               <p>
               One of our scientists wanted an easy way to access Normals data, so I worked up this visualization which ended up being very popular. 
-              It's running on top of the CDO web service, and uses jQuery promises and 
-              deferred objects to manage multiple asynchronous requests. 
+              Users can view normals station data for several time periods, and links are provided to more detailed reports.
+              It's running on top of the CDO web service, and uses jQuery promises and deferred objects to manage multiple asynchronous requests. 
               </p>
             </div>
           </div>
@@ -62,8 +62,12 @@
             </div>
             <div class="entry">
               <p>
-              This is NCDC's station metadata access system, for which I am the sole developer. This is a standard Spring app using iBatis mappings into an Oracle database to serve a RESTful web service.
-              The metadata search and visualizations are built on this service, and are presented as a single-page app. rGraph was inherited from the previous developer. 
+              This is NCDC's station metadata access system, for which I am the sole developer. 
+              It's a standard Spring MVC application using iBatis mappings into an Oracle database to serve a RESTful web service.
+              The metadata search and visualizations are built on this service, and are presented as a single-page app. 
+              On the locations tab I implemented a new system for displaying station locations where we don't have precise coordinates, showing areas
+              instead of points for these types of stations.
+              rGraph is used for the Gantt chart on the MSHR tab.
               </p>
             </div>
           </div>
@@ -91,7 +95,7 @@
               <img src="resources/images/transit.png" alt="avl transit screenshot" class="img-responsive img-rounded">
             </div>
             <div class="entry">
-              <p>I did a mobile first redesign of the Asheville Transit website, including an interactive route map, for a class I took. It uses some Groovy scripts 
+              <p>I did a mobile-first redesign of the Asheville Transit website, including an interactive route map, for a class I took. It uses some Groovy scripts 
               to assemble the route files into kml format.
               </p>
             </div>
@@ -107,7 +111,8 @@
             </div>
             <div class="entry">
               <p>I originally wrote this as a Python desktop app, but migrated it to Grails, and then Angular/Node. It gathers tag info for a Last.fm user's top artists 
-              and displays some trend stats.
+              and displays some trend stats. I use D3 and some D3 plugins to generate the visualizations. Because the last.fm API is limited to one request per second, 
+              I also build a local cache of artist tag information when the service is used. This data is stored in a MongoDB instance.
               </p>
             </div>
           </div>
@@ -134,7 +139,7 @@
               <img src="resources/images/hangman.png" alt="hangman screenshot" class="img-responsive img-rounded">
             </div>
             <div class="entry">
-              <p>I did a little hangman app for a Coursera interview. It started as a Grails app, but ended up just using JavaScript for everything. I used RaphaelJS for the graphics,
+              <p>I did a little hangman app for an interview at Coursera. It started as a Grails app, but ended up just using JavaScript for everything. I used RaphaelJS for the graphics,
               and had to interact with their JSONP web service. Not public in case you're applying for the job too ;)
               </p>
             </div>
@@ -150,17 +155,9 @@
             <div class="entry">
               <p>I wanted to be able to view <a href="http://www.dailymile.com/">DailyMile</a> entries one month at a time, 
                 but they don't offer that feature. I used
-                the jQuery plugin <a href="http://arshaw.com/fullcalendar/">FullCalendar</a> to create my own view. This is
-                a work in progress.
-              </p>
-              <p> 
-                Unfortunately, the DailyMile API is kind of broken right now: The only date info returned for an event is the
-                date that it was posted to the site, not the date that it actually took place. So lots of events show up on the
-                wrong day, which makes this whole thing kind of pointless. I've stopped working on this until I hear 
-                something back from them.
-              </p>
-              <p>
-              
+                the jQuery plugin <a href="http://arshaw.com/fullcalendar/">FullCalendar</a> to create my own view. 
+                I've also added a D3 line chart with focus panel, from the <a href="http://nvd3.org/ghpages/lineWithFocus.html">nvd3.js</a> library.
+                This is a work in progress.
               </p>
             </div>
           </div>
@@ -192,9 +189,13 @@
             <div class="well">
               <img src="resources/images/profile.jpg" alt="profile pic" class="img-responsive img-rounded">
               <br />
-              <p>Hi, I'm Ethan Shepherd, a developer building web and science data applications in Asheville, NC. This page is a collection of the things I've
-              built, either for my job or to learn something new. I'm available for small to medium sized projects, especially involving front-end JavaScript. If 
+              <p>Hi, I'm Ethan Shepherd, a developer building web and science data applications in Asheville, NC. I've worked on everything from satellite data products 
+              using C and Fortran, to <a href="http://en.wikipedia.org/wiki/Single-page_application">SPA's</a> on Node and Angular. 
+              This page is a collection of the things I've built, either for my job or to learn something new.</p>
+
+              <p>I'm available for small to medium sized projects, especially involving front-end JavaScript. If 
               you're interested, get in touch: <a href="mailto:ethan.m.shepherd@gmail.com">ethan.m.shepherd@gmail.com</a>.</p>
+
               <div id="badges">
                 <a href="https://github.com/someguy235"><img src="resources/images/github.png" /></a>
                 <a href="http://stackoverflow.com/users/90276/ethan-shepherd"><img src="resources/images/stackoverflow.png" /></a>
