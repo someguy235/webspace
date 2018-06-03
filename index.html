@@ -24,9 +24,50 @@
       </div>
       <div class="row">
         <div class="col-md-7">
+          
+          <div class="row post"> 
+            <h2 class="title">2017 Eclipse Traffic</h2>
+            <p class="byline tags"><small><span>JavaScript</span> - <span>OpenCV</span> - <span>Python</span><br />
+            <a href="http://github.com/someguy235/eclipse-traffic">GitHub > someguy235 > Eclipse Traffic</a></small></p>
+            <div class="row screenshot">
+                <img src="resources/images/eclipse.png" alt="paleo screenshot" class="img-responsive img-rounded">
+            </div>
+            <div class="row entry">
+              <p>
+              Lots of conversations I had before the 2017 eclipse involved guessing what the traffic situation was going to be like, 
+              so I decided it would be neat to visualize it and threw this project together at the last minute. I created a simple HTML page that showed the map I was interested in, 
+              with the Google traffic data layer. The page used <a href="https://html2canvas.hertzen.com/">html2canvas.js</a> to create an 
+              HTML canvas version of the map after it loads. 
+              I set up <a href="http://phantomjs.org/">phantomJS</a> to scrape that page every 10 minutes. After the traffic died down, 
+              I used Python and <a href="http://opencv.org/">OpenCV</a> to add a 
+              layer to all the images with the time and totality path from <a href="http://www.eclipsewise.com/solar/SEnews/TSE2017/TSE2017tab/TSE2017-Tab1-7c.pdf">this</a> data. 
+              The path is not exactly right because I had to 
+              fake the projection onto the flat images, but it's pretty close. Finally I merged all the images in Photoshop. You can
+              see the final results <a href="https://i.imgur.com/YWCA76v.gif">here</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="row post"> 
+            <h2 class="title"><a href="https://www.ncdc.noaa.gov/paleo-search/">Paleo DIVER</a>/<a href="https://www.ncdc.noaa.gov/paleo-search/api">DIVER API</a></h2>
+            <p class="byline tags"><small><span>Java</span> - <span>Spring</span> - <span>Oracle</span> - <span>AngularJS</span> - <span>iBatis</span><br /></small></p>
+            <div class="row screenshot">
+                <img src="resources/images/paleo.png" alt="paleo screenshot" class="img-responsive img-rounded">
+            </div>
+            <div class="row entry">
+              <p>
+              This is NCEI's Paleoclimatology study search and access tool, for which I am the principal developer. It is a Spring application using myBatis/Oracle 
+              providing a RESTful API, and a search interface built with Angular.js. The interface allows searching over popular fields such as study investigators,
+              locations, and time periods, and was recently updated to support terms from the multi-year Controlled Variables standardization project. 
+              Current development is focused on performance improvements, such as virtual scrolling to handle e.g. the 4000+ investigators options, and a custom study 
+              pre-generation cache system. 
+              </p>
+            </div>
+          </div>
+          
           <div class="row post"> 
             <h2 class="title">Lifetracker</h2>
-            <p class="byline tags"><small><span>Android</span> - <span>achartengine</span><br />
+            <p class="byline tags"><small><span>Android</span> - <span>achartengine</span> - <span>NodeJS</span> - <span>ReactJS</span><br />
             <a href="http://github.com/someguy235/lifetracker">GitHub > someguy235 > Lifetracker</a></small></p>
             <div class="row screenshot">
               <div class="col-md-4">
@@ -44,14 +85,14 @@
                 I was looking for a simple tool to keep track of some basic recurring information, e.g. how much do I sleep, how much 
                 time am I spending on classwork, etc. I couldn't find anything I liked, so I built an Android application. Basic functionality 
                 is done and I'm adding features as I have time. If you want to try it out, you can get the most current apk 
-                <a href="resources/files/LifeTracker.apk">here</a>.
+                <a href="resources/files/LifeTracker.apk">here</a>. I'm now also working on a webapp version that syncs with the Android application.
               </p>
             </div>
           </div>
 
           <div class="row post"> 
             <h2 class="title"><a href="avlcrime">Asheville Crime Mapper</a></h2>
-            <p class="byline tags"><small><span>Angular.js</span> - <span>Node.js</span> - <span>Leaflet.js</span> - <span>MongoDB</span> - <span>Bootstrap</span><br />
+            <p class="byline tags"><small><span>AngularJS</span> - <span>NodeJS</span> - <span>LeafletJS</span> - <span>MongoDB</span> - <span>Bootstrap</span><br />
             <a href="http://github.com/someguy235/avlcrime">GitHub > someguy235 > AvlCrime</a></small></p>
             <div class="row screenshot">
               <img src="resources/images/avlcrime.png" alt="avl crime screenshot" class="img-responsive img-rounded">
@@ -59,29 +100,15 @@
             <div class="row entry">
               <p>
                 I used some of Asheville's <a href="http://opendatacatalog.ashevillenc.gov/">open city data</a> to map crime information for the area. Data is pulled from the city data web
-                service, and stored locally to a mondgodb instance. It's then displayed interactively using lefalet.js/heatmap.js.
+                service, and stored locally to a mondgodb instance. It's then displayed interactively using lefalet.js/heatmap.js. Unfortunately the city's GIS service is no longer active 
+                so the tool is not current.
               </p>
             </div>
           </div>
-<!--
-          <div class="row post"> 
-            <h2 class="title">NCDC Climate Atlas</h2>
-            <p class="byline tags"><small><span>JavaScript</span> (<span>jQuery</span>) - <span>D3.js</span> (<span>xCharts</span>)<br /></small>
-            <div class="row screenshot">
-              <img src="resources/images/climateatlas.png" alt="climate atlas screenshot" class="img-responsive img-rounded">
-            </div>
-            <div class="entry">
-              <p>
-              One of our scientists wanted an easy way to access Normals data, so I worked up this visualization which ended up being very popular. 
-              Users can view normals station data for several time periods, and links are provided to more detailed reports.
-              It's running on top of the CDO web service, and uses jQuery promises and deferred objects to manage multiple asynchronous requests. (Now defunct).
-              </p>
-            </div>
-          </div>
-          -->
+
           <div class="row post"> 
             <h2 class="title">NCDC Normals Access</h2>
-            <p class="byline tags"><small><span>JavaScript</span> (<span>jQuery</span>) - <span>D3.js</span> (<span>xCharts</span>)<br /></small>
+            <p class="byline tags"><small><span>JavaScript</span> (<span>jQuery</span>, <span>D3JS</span>, <span>xCharts</span>)<br /></small></p>
             <div class="row screenshot">
               <img src="resources/images/normals.png" alt="normals screenshot" class="img-responsive img-rounded">
             </div>
@@ -96,7 +123,7 @@
           
           <div class="row post"> 
             <h2 class="title"><a href="http://www.ncdc.noaa.gov/homr">NCDC Historical Observational Metadata Repository (HOMR)</a> / <a href="http://www.ncdc.noaa.gov/homr/api">HOMR API</a></h2>
-            <p class="byline tags"><small><span>Spring</span> - <span>Oracle</span> - <span>iBatis</span> - <span>JavaScript</span> (<span>jQuery</span>) - <span>rGraph</span><br /></small>
+            <p class="byline tags"><small><span>Java</span> - <span>Spring</span> - <span>Oracle</span> - <span>iBatis</span> - <span>JavaScript</span> (<span>jQuery</span>, <span>D3JS</span>)<br /></small></p>
             <div class="row screenshot">
               <img src="resources/images/homr.png" alt="homr screenshot" class="img-responsive img-rounded">
             </div>
@@ -107,20 +134,20 @@
               The metadata search and visualizations are built on this service, and are presented as a single-page app. 
               On the locations tab I implemented a new system for displaying station locations where we don't have precise coordinates, showing areas
               instead of points for these types of stations.
-              rGraph is used for the Gantt chart on the MSHR tab.
+              D3.js is used for the Gantt chart on the MSHR tab.
               </p>
             </div>
           </div>
 
           <div class="row post"> 
             <h2 class="title">Friendly Library</h2>
-            <p class="byline tags"><small><span>Groovy</span> - <span>Grails</span> - <span>JavaScript</span> - <span>Angular.js</span> - <span>Postgres</span><br />
+            <p class="byline tags"><small><span>Groovy</span> - <span>Grails</span> - <span>JavaScript</span> - <span>AngularJS</span> - <span>Postgres</span><br />
             <a href="http://github.com/someguy235/friendlibrary">GitHub > someguy235 > FriendLibrary</a></small></p>
             <div class="row screenshot">
               <img src="resources/images/friendlib.png" alt="friend lib screenshot" class="img-responsive img-rounded">
             </div>
             <div class="entry">
-              <p>FrindlyLib (or whatever it's called now) let's people create a catalog of their book, movies, and other physical media, and keep track of them 
+              <p>FrindlyLib lets people create a catalog of their book, movies, and other physical media, and keep track of them 
               when they're loaned out. Users can also search among their friends for items they want to borrow. I've used this project to learn a few technologies, so 
               it's kind of a mess and never finished. 
               </p>
@@ -140,7 +167,8 @@
               </p>
             </div>
           </div>
-
+          
+          <!--
           <div class="row post"> 
             <h2 class="title"><a href="lastfm">Last.fm Tag Stats</a></h2>
             <p class="byline tags"><small><span>Angular.js</span> - <span>Node.js</span> - <span>D3.js</span> - <span>Mongodb</span> - <span>Last.fm API</span> - <span>Bootstrap</span>
@@ -156,7 +184,8 @@
               </p>
             </div>
           </div>
-
+          -->
+          <!--
           <div class="row post"> 
             <h2 class="title">Mission Hospital Touch Kiosk</h2>
             <p class="byline tags"><small><span>JavaScript</span> (<span>jQuery</span>) - <span>Bootstrap</span><br />
@@ -170,7 +199,8 @@
               </p>
             </div>
           </div>
-
+          -->
+          <!--
           <div class="row post"> 
             <h2 class="title">Coursera Hangman</h2>
             <p class="byline tags"><small><span>JavaScript</span> (<span>jQuery</span>) - <span>Raphael.js</span> - <span>Bootstrap</span> - <span>Grails</span><br />
@@ -184,7 +214,8 @@
               </p>
             </div>
           </div>
-
+          -->
+          <!--
           <div class="row post"> 
             <h2 class="title"><a href="dailymile">DailyMile Calendar</a></h2>
             <p class="byline tags"><small><span>Grails</span> - <span>Groovy</span> - <span>JavaScript</span> - <span>DailyMile.com API</span><br />
@@ -201,7 +232,8 @@
               </p>
             </div>
           </div>
-          
+          -->
+          <!--
           <div class="row post"> 
             <h2 class="title">Robot Race</h2>
             <p class="byline tags"><small><span>Java</span> - <span>Swing</span><br />
@@ -213,7 +245,8 @@
               <p>Java/Swing implementation of the Robo-Rally board game by Wizard of the Coast. My undergraduate senior project.</p>
             </div>
           </div>
-          
+          -->
+          <!--
           <div class="row post"> 
             <h2 class="title">Sudoku Solver</h2>
             <p class="byline tags"><small><span>Java</span><br />
@@ -222,21 +255,25 @@
               <p>Sudoku solver in Java, from a few years ago.</p>
             </div>
           </div>
+          -->
         </div>
-
         <div class="col-md-4 col-md-offset-1">
           <div class="row">
             <div class="well">
               <img src="resources/images/profile.jpg" alt="profile pic" class="img-responsive img-rounded">
               <br />
               <p>Hi, I'm Ethan Shepherd, a developer building web and science data applications in Asheville, NC. I've worked on everything from satellite data products 
-              using C and Fortran, to <a href="http://en.wikipedia.org/wiki/Single-page_application">SPA's</a> on Node and Angular. 
-              This page is a collection of the things I've built, either for my job or to learn something new.</p>
-
+              using C and Fortran, to Spring MVC apps on Oracle, to SPA's with Node and Angular. 
+              This page is a collection of some of the things I've built, either for my job or to learn something new.</p>
+              <!--
               <p>I don't have a lot of time for side projects right now as I'm currently enrolled in the <a href="http://www.omscs.gatech.edu/">OMSCS</a> 
                 program at Georgia Tech, but if you have something you think I might be interested in feel free to get in touch: 
               <a href="mailto:ethan.m.shepherd@gmail.com">ethan.m.shepherd@gmail.com</a>.</p>
-
+              -->
+              <p style="text-align:center">
+              <a href="./resources/files/Shepherd - Resume.pdf">CV</a><br />
+              <a href="mailto:ethan.m.shepherd@gmail.com">ethan.m.shepherd@gmail.com</a>
+              </p>
               <div id="badges">
                 <a href="https://github.com/someguy235"><img src="resources/images/github.png" /></a>
                 <a href="http://stackoverflow.com/users/90276/ethan-shepherd"><img src="resources/images/stackoverflow.png" /></a>
