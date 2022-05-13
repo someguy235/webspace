@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+#main #main-content {
+  max-width: 1000px;
+  width: 100%;
+}
+#main-columns {
+  display: grid;
+  grid-template-columns: 33% 67%;
+}
+
+#header-area {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+}
+#header-area #header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  /* padding-left: 1rem; */
+  width: 100%;
+}
+#header-content {
+  z-index: 50;
+}
+#header-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(50, 1fr);
+}
+.header-grid-square {
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.grid-square-active {
+  animation: fadeIn 1000ms;
+}
+.grid-square-inactive {
+  animation: fadeOut 1000ms;
+}
+.grid-square-active-1 {
+  /* background-color: #7fffd433; */
+  background: white;
+  background: radial-gradient(circle, #7fffd455 0%, white 75%, white 100%);
+}
+.grid-square-active-2 {
+  /* background-color: #00ffff33; */
+  background: white;
+  background: radial-gradient(circle, #00ffff55 0%, white 75%, white 100%);
+}
+.grid-square-active-0 {
+  /* background-color: #e681de33; */
+  background: white;
+  background: radial-gradient(circle, #e681de55 0%, white 75%, white 100%);
+}
+
+#header-area .name {
+  font-size: 2rem;
+}
+#header-area .subname {
+  font-size: 1rem;
+}
+
+#menu-area {
+  background-color: beige;
+  height: 25%;
+  position: sticky;
+
+  top: 5rem;
+}
+#menu-area ul {
+  padding: 0;
+}
+#menu-area ul li {
+  background-color: aliceblue;
+  /* border-top: 1px solid grey; */
+  list-style: none;
+  margin: 0.5rem 1rem;
+}
+#menu-area ul li button {
+  background-color: inherit;
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#menu-area ul li.selected {
+  background-color: cadetblue;
+}
+
+#sections-area {
+  /* background-color: burlywood; */
+  border: 1px solid grey;
+  height: 2000px;
+  margin-top: 5rem;
+}
