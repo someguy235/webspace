@@ -3,7 +3,7 @@ const Menu = ({ section, setSection }) => {
     setSection(s);
   };
   return (
-    <div id="menu-area">
+    <menu id="menu-area">
       <ul>
         <li className={section === "about" ? "selected" : ""}>
           <button onClick={() => handleClick("about")}>About</button>
@@ -21,7 +21,7 @@ const Menu = ({ section, setSection }) => {
           <button onClick={() => handleClick("cv")}>CV</button>
         </li>
       </ul>
-    </div>
+    </menu>
   );
 };
 

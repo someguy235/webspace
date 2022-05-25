@@ -25,11 +25,12 @@ const getRandomLife = (seed) => {
   return Math.floor(Math.random() * seed) === seed - 1;
 };
 
-const HeaderSquare = ({ i, t, active }) => {
+const HeaderSquare = ({ i, active }) => {
   return (
     <div
       className={
-        "header-grid-square" + (active ? " grid-square-active-" + t : "")
+        "header-grid-square" +
+        (active ? ` grid-square-active grid-square-active-${i}` : "")
       }
     ></div>
   );
@@ -60,7 +61,7 @@ const Header = () => {
     setLifeArray(() => {
       return newLife;
     });
-  }, 1000);
+  }, 2000);
 
   const checkArea = (x, y, a) => {
     let n = 0;
@@ -95,37 +96,42 @@ const Header = () => {
   };
 
   useEffect(() => {
-    initLife();
+    // initLife();
   }, []);
 
   return (
-    <div id="header-area">
+    <header id="header-area">
       <div id="header-grid">
         {lifeArray.map((e, i) =>
           e.map((f, j) => (
             <SwitchTransition key={i + 1 * j + 1} mode="out-in">
               <CSSTransition
-                key={i + 1 * j + 1}
+                key={f}
                 classNames={{
-                  enter: "grid-square-active",
-                  exit: "grid-square-inactive",
+                  enter: "grid-square-enter",
                 }}
-                timeout={2000}
+                timeout={500}
               >
-                <HeaderSquare i={i} t={i % 3} active={f} />
+                <HeaderSquare i={(i + 1 * j + 1) % 3} active={f} />
               </CSSTransition>
             </SwitchTransition>
           ))
         )}
       </div>
-      <div id="header-content">
-        <div className="name">Ethan Shepherd</div>
-        <div className="subname">software developer</div>
+      <div id="header-content-container">
+        <div id="header-content">
+          <div className="name">Ethan Shepherd</div>
+          <div className="subname">software developer</div>
+        </div>
+        <div id="reset-button-container">
+          <div>
+            <button className="life-init-button" onClick={initLife}>
+              reset
+            </button>
+          </div>
+        </div>
       </div>
-      <button className="life-init-button" onClick={initLife}>
-        reset
-      </button>
-    </div>
+    </header>
   );
 };
 
