@@ -33,7 +33,7 @@ const About = () => {
       </p>
       <div id="about-contact-container">
         <div id="about-contact">
-          <a href="Shepherd - Resume.pdf">CV</a>
+          {/* <a href="Shepherd - Resume.pdf">CV</a> */}
           <a href="mailto:ethan.m.shepherd@gmail.com">
             ethan.m.shepherd@gmail.com
           </a>

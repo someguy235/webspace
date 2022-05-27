@@ -9,15 +9,9 @@ const App = () => {
   return (
     <div id="content">
       <Header />
-      <div id="main">
-        <div id="main-content">
-          <div id="main-columns">
-            <Menu section={section} setSection={setSection} />
-            <div id="sections-area">
-              <Sections section={section} />
-            </div>
-          </div>
-        </div>
+      <Menu section={section} setSection={setSection} />
+      <div id="sections-area">
+        <Sections section={section} />
       </div>
     </div>
   );

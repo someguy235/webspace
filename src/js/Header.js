@@ -43,7 +43,6 @@ const Header = () => {
     COLS = 100;
 
   const initLife = () => {
-    console.log("initLife()");
     let tempLife = [];
     for (let i = 0; i < ROWS; i++) {
       tempLife.push([]);
@@ -56,12 +55,12 @@ const Header = () => {
     });
   };
 
-  useInterval(() => {
-    const newLife = updateLife();
-    setLifeArray(() => {
-      return newLife;
-    });
-  }, 2000);
+  // useInterval(() => {
+  //   const newLife = updateLife();
+  //   setLifeArray(() => {
+  //     return newLife;
+  //   });
+  // }, 2000);
 
   const checkArea = (x, y, a) => {
     let n = 0;
@@ -96,7 +95,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // initLife();
+    initLife();
   }, []);
 
   return (
