@@ -25,8 +25,14 @@
 
 body {
   background-color: #ffffff;
+  font-family: "Bitter", serif;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: var(--solarized-blue);
+  text-decoration: none;
 }
 
 #content {
@@ -51,7 +57,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 120px;
+  height: 122px;
 }
 #header-content-container {
   display: grid;
@@ -182,7 +188,6 @@ body {
 #sections-area {
   grid-area: content;
   color: var(--solarized-base02);
-  font-family: "Bitter", serif;
   overflow: auto;
 }
 
@@ -209,6 +214,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+#about-contact a {
+  color: var(--solarized-blue);
+  text-decoration: none;
 }
 #about-badges {
   display: flex;
@@ -248,6 +257,7 @@ body {
 }
 .project-git a {
   color: var(--solarized-blue);
+  text-decoration: none;
 }
 .project-imgs {
   display: flex;
@@ -266,4 +276,133 @@ body {
 }
 .project-desc a {
   color: var(--solarized-blue);
+  text-decoration: none;
+}
+
+/********/
+/* Pubs */
+/********/
+
+#pubs-section {
+}
+#pubs-section a {
+  color: var(--solarized-blue);
+}
+#pubs-section ul {
+  list-style: none;
+}
+#pubs-section li {
+  margin-bottom: 1rem;
+}
+.journal {
+  font-style: italic;
+}
+
+/******/
+/* CV */
+/******/
+#cv-section {
+  margin-right: 2rem;
+}
+#cv-header-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+.cv-banner {
+  font-family: "Montserrat", sans-serif;
+}
+.cv-name {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.cv-tagline {
+  font-size: 1.2rem;
+}
+.cv-contact-info {
+  display: grid;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+.cv-section-header {
+  border-bottom: 1px solid var(--solarized-base1);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#cv-skills-section {
+  margin-bottom: 2rem;
+}
+.cv-skills-content {
+  display: grid;
+  grid-template-columns: 35% auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-left: 1rem;
+}
+.cv-skills-content > div {
+  padding-top: 5px;
+}
+.cv-skills-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.cv-skills-tier {
+  font-weight: 600;
+}
+#cv-exp-section {
+}
+.cv-exp-position {
+  margin-bottom: 2rem;
+}
+.cv-exp-header {
+  display: grid;
+  grid-template-columns: auto 35%;
+  grid-template-rows: auto auto;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+.cv-exp-employer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.cv-exp-dates {
+  justify-self: end;
+}
+.cv-exp-title {
+  font-style: italic;
+}
+.cv-exp-location {
+  font-style: italic;
+  justify-self: end;
+}
+.cv-exp-summary {
+  margin-left: 1rem;
+}
+.cv-exp-highlights {
+  padding-left: 1rem;
+}
+.cv-exp-highlights li {
+  margin-bottom: 5px;
+}
+.cv-exp-highlight-title {
+  font-style: italic;
+}
+#cv-edu-section {
+  margin-bottom: 5rem;
+}
+.cv-edu-entry {
+  display: grid;
+  grid-template-columns: auto 20%;
+  grid-template-rows: auto auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.cv-edu-institution {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.cv-edu-dates {
+  display: grid;
+  justify-content: end;
 }

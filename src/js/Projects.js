@@ -57,7 +57,6 @@ const ProjectDesc = ({ project }) => {
 };
 
 const Project = ({ project }) => {
-  console.log(project);
   return (
     <div className="project">
       <ProjectTitle project={project} />
