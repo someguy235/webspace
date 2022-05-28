@@ -195,8 +195,6 @@ a {
 /* About */
 /*********/
 
-#about-section {
-}
 #self-portrait {
   border-radius: 5px;
   float: right;
@@ -279,25 +277,6 @@ a {
   text-decoration: none;
 }
 
-/********/
-/* Pubs */
-/********/
-
-#pubs-section {
-}
-#pubs-section a {
-  color: var(--solarized-blue);
-}
-#pubs-section ul {
-  list-style: none;
-}
-#pubs-section li {
-  margin-bottom: 1rem;
-}
-.journal {
-  font-style: italic;
-}
-
 /******/
 /* CV */
 /******/
@@ -331,6 +310,8 @@ a {
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+/* CV Skills */
 #cv-skills-section {
   margin-bottom: 2rem;
 }
@@ -350,7 +331,10 @@ a {
 .cv-skills-tier {
   font-weight: 600;
 }
+
+/* CV Exp */
 #cv-exp-section {
+  margin-bottom: 2rem;
 }
 .cv-exp-position {
   margin-bottom: 2rem;
@@ -388,8 +372,10 @@ a {
 .cv-exp-highlight-title {
   font-style: italic;
 }
+
+/* CV Edu */
 #cv-edu-section {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .cv-edu-entry {
   display: grid;
@@ -405,4 +391,22 @@ a {
 .cv-edu-dates {
   display: grid;
   justify-content: end;
+}
+
+/* CV Pubs */
+#cv-pubs-section {
+  margin-bottom: 5rem;
+}
+#cv-pubs-section a {
+  color: var(--solarized-blue);
+}
+#cv-pubs-section ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+#cv-pubs-section li {
+  margin-bottom: 1rem;
+}
+.journal {
+  font-style: italic;
 }

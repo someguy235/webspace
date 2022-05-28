@@ -140,21 +140,6 @@ const Experience = () => {
             operations. Required coding for portability and ease of use,
             standardizing output, and creating documentation.
           </li>
-          <li>
-            Bilotta, Rocky, Jesse E. Bell, Ethan Shepherd, and Anthony Arguez.{" "}
-            <span className="cv-exp-highlight-title">
-              Calculations and evaluations of an air-freezing index for the
-              1981-2010 climate normal period in the coterminous United States.
-            </span>{" "}
-            -{" "}
-            <a
-              href="https://doi.org/10.1175/jamc-d-14-0119.1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              JAMC
-            </a>
-          </li>
         </ul>
       </div>
 
@@ -236,6 +221,52 @@ const Education = () => {
     </div>
   );
 };
+
+const Pubs = () => {
+  return (
+    <section id="cv-pubs-section">
+      <div className="cv-section-header">PUBLICATIONS</div>
+      <ul>
+        <li>
+          Morrill, C., Thrasher, B., Lockshin, S. N., Gille, E. P., McNeill, S.,
+          Shepherd, E., et al. (2021). The paleoenvironmental standard terms
+          (PaST) thesaurus: Standardizing heterogeneous variables in
+          paleoscience.{" "}
+          <span className="journal">Paleoceanography and Paleoclimatology</span>
+          , 36, e2020PA004193.{" "}
+          <a
+            href="https://doi.org/10.1029/2020PA004193"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://doi.org/10.1029/2020PA004193
+          </a>
+        </li>
+        <li>
+          Bilotta, R., Bell, J. E., Shepherd, E., & Arguez, A. (2015).
+          Calculation and Evaluation of an Air-Freezing Index for the 1981–2010
+          Climate Normals Period in the Coterminous United States,{" "}
+          <span className="journal">
+            Journal of Applied Meteorology and Climatology
+          </span>
+          , 54(1), 69-76.{" "}
+          <a
+            href="https://doi.org/10.1175/jamc-d-14-0119.1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://doi.org/10.1175/jamc-d-14-0119.1
+          </a>
+        </li>
+        <li>
+          Shepherd, E. (2009, Dec). Using BitTorrent for Large Scale Data
+          Distribution. Paper presented at the 2009 meeting of the American
+          Geophysical Union, San Francisco.
+        </li>
+      </ul>
+    </section>
+  );
+};
 const CV = () => {
   return (
     <div id="cv-section">
@@ -243,6 +274,7 @@ const CV = () => {
       <Skills />
       <Experience />
       <Education />
+      <Pubs />
     </div>
   );
 };

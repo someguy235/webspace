@@ -1,6 +1,6 @@
 import About from "./About";
 import Projects from "./Projects";
-import Pubs from "./Pubs";
+import Skills from "./Skills";
 import CV from "./Cv";
 
 const Sections = ({ section }) => {
@@ -9,12 +9,10 @@ const Sections = ({ section }) => {
       return <About />;
     case "projects":
       return <Projects />;
-    case "pubs":
-      return <Pubs />;
+    case "skills":
+      return <Skills />;
     case "cv":
       return <CV />;
-    default:
-      return <span>{section} section</span>;
   }
 };
 
