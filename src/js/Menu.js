@@ -1,6 +1,12 @@
-const Menu = ({ section, setSection }) => {
+const Menu = ({ section, setSection, mode, setMode }) => {
   const handleClick = (s) => {
     setSection(s);
+  };
+  const updateMode = () => {
+    console.log("mode: " + mode);
+    setMode((cur) => {
+      return cur === "day" ? "night" : "day";
+    });
   };
   return (
     <menu id="menu-area">
@@ -18,6 +24,7 @@ const Menu = ({ section, setSection }) => {
           <button onClick={() => handleClick("cv")}>CV</button>
         </li>
       </ul>
+      <button onClick={updateMode}>{mode}</button>
     </menu>
   );
 };
