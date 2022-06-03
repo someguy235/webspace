@@ -3,10 +3,10 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import CV from "./Cv";
 
-const Sections = ({ section }) => {
+const Sections = ({ section, mode }) => {
   switch (section) {
     case "about":
-      return <About />;
+      return <About mode={mode} />;
     case "projects":
       return <Projects />;
     case "skills":

@@ -9,7 +9,7 @@ const App = () => {
   const [section, setSection] = useState("about");
   const [mode, setMode] = useState("day");
   return (
-    <div id="content">
+    <div id="content" className={mode}>
       <Header />
       <Menu
         section={section}
@@ -18,7 +18,7 @@ const App = () => {
         setMode={setMode}
       />
       <div id="sections-area">
-        <Sections section={section} />
+        <Sections section={section} mode={mode} />
       </div>
       <Footer mode={mode} />
       <div id="day-sky-container">

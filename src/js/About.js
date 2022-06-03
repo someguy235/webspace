@@ -3,7 +3,7 @@ import linkedin_logo from "../img/logos/linkedin.png";
 import stack_logo from "../img/logos/stackoverflow.png";
 import profile from "../img/profile-2.jpg";
 
-const About = () => {
+const About = ({ mode }) => {
   return (
     <section id="about-section">
       <img
