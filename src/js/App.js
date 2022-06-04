@@ -20,7 +20,7 @@ const App = () => {
       <div id="sections-area">
         <Sections section={section} mode={mode} />
       </div>
-      <Footer mode={mode} />
+      <Footer mode={mode} setMode={setMode} />
       <div id="day-sky-container">
         <div id="day-sky-grid-container">
           <div style={{ opacity: mode === "day" ? 1 : 0 }} id="day-sky"></div>

@@ -24,7 +24,7 @@ const Menu = ({ section, setSection, mode, setMode }) => {
           <button onClick={() => handleClick("cv")}>CV</button>
         </li>
       </ul>
-      <button onClick={updateMode}>{mode}</button>
+      {/* <button onClick={updateMode}>{mode}</button> */}
     </menu>
   );
 };
