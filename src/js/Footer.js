@@ -15,6 +15,12 @@ const Footer = ({ mode }) => {
         <div className="desert-ground-dark"></div>
         <div className="desert-ground-darker"></div>
       </div>
+      <div id="day-night-toggle-container">
+        <div id="day-night-toggle">
+          <div id="day-toggle"></div>
+          <div id="night-toggle"></div>
+        </div>
+      </div>
       <div style={{ opacity: mode === "day" ? 1 : 0 }} id="day-ground"></div>
       <div style={{ opacity: mode === "day" ? 0 : 1 }} id="night-ground"></div>
       <div id="footer-right-day" style={{ opacity: mode === "day" ? 1 : 0 }}>

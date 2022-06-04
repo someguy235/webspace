@@ -50,6 +50,7 @@
 body {
   background-color: #ffffff;
   font-family: "Bitter", serif;
+  font-size: 0.9rem;
   padding: 0;
   margin: 0;
 }
@@ -73,7 +74,7 @@ a {
 #night-sky-grid-container,
 #day-sky-grid-container {
   display: grid;
-  grid-template-rows: auto 150px;
+  grid-template-rows: auto 100px;
   height: 100vh;
   width: 100%;
 }
@@ -81,7 +82,8 @@ a {
   background: linear-gradient(
     0deg,
     var(--desert-sky-light) 0,
-    var(--desert-sky-lighter) 150px
+    var(--desert-sky-light) 100px,
+    var(--desert-sky-lighter) 200px
   );
   display: grid;
   grid-row-start: 1;
@@ -93,7 +95,8 @@ a {
   background: linear-gradient(
     0deg,
     var(--desert-sky-dark) 0,
-    var(--desert-sky-darker) 150px
+    var(--desert-sky-dark) 100px,
+    var(--desert-sky-darker) 200px
   );
   display: grid;
   grid-row-start: 1;
@@ -106,7 +109,7 @@ a {
   display: grid;
   grid-column-gap: 3%;
   row-gap: 50px;
-  grid-template-rows: 120px calc(100vh - 370px) 150px;
+  grid-template-rows: 100px calc(100vh - 300px) 100px;
   grid-template-columns: 10% 20% auto 10%;
   grid-template-areas:
     "header header header header"
@@ -132,7 +135,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 122px;
+  height: 100px;
 }
 #header-content-container {
   display: grid;
@@ -156,10 +159,10 @@ a {
   color: var(--solarized-base2);
 }
 #header-area .name {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 #header-area .subname {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 #header-grid {
   position: absolute;
@@ -171,8 +174,8 @@ a {
 }
 .header-grid-square {
   border-radius: 5px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #66666611;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -225,13 +228,42 @@ a {
 /**********/
 /* Footer */
 /**********/
+
 #footer-area {
   grid-area: footer;
   display: grid;
-  grid-template-columns: auto 1000px auto;
+  grid-template-columns: auto 800px auto;
   grid-template-rows: auto;
-  height: 150px;
+  height: 100px;
   width: 100%;
+}
+#day-night-toggle-container {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  position: relative;
+}
+#day-night-toggle {
+  display: flex;
+  position: absolute;
+  /* top: -10px; */
+  left: -50px;
+}
+#day-toggle {
+  background: url("../img/sun.svg");
+  background-size: 100% 100%;
+  width: 2rem;
+  height: 2rem;
+}
+#content.night #day-toggle {
+}
+#night-toggle {
+  background: url("../img/moon.svg");
+  background-size: 100% 100%;
+  width: 2rem;
+  height: 2rem;
+}
+#content.day #night-toggle {
 }
 #footer-area #day-ground {
   background: url("../img/desert-ground-day.png");
@@ -254,7 +286,7 @@ a {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-rows: 65px 7px 32px 28px auto;
+  grid-template-rows: 43% 5% 21% 19% 12%;
   transition: all 2s;
 }
 #footer-right-day,
@@ -264,7 +296,7 @@ a {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-rows: 76px 0px 28px 18px auto;
+  grid-template-rows: 51% 0 19% 11% 19%;
   transition: all 2s;
 }
 
@@ -337,7 +369,7 @@ a {
   background-color: inherit;
   border: none;
   font-family: inherit;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 0.5rem 0;
   transition: color 2s;
   width: 100%;
@@ -394,17 +426,17 @@ a {
 
 .project {
   border-bottom: 1px solid var(--solarized-base00);
-  margin-bottom: 3rem;
-  padding: 0 1rem 3rem 1rem;
+  margin-bottom: 2rem;
+  padding: 0 0.8rem 2rem 0.8rem;
 }
 .project:last-of-type {
   border-bottom: none;
 }
 .project-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .project-title a {
   color: var(--solarized-blue);
@@ -412,16 +444,16 @@ a {
 }
 .project-tech {
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .project-git {
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .project-imgs {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   max-width: 100%;
 }
 .project-imgs img {
@@ -438,22 +470,22 @@ a {
 /* CV */
 /******/
 #cv-section {
-  margin-right: 2rem;
+  margin-right: 1.6rem;
 }
 #cv-header-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 .cv-banner {
   font-family: "Montserrat", sans-serif;
 }
 .cv-name {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
 }
 .cv-tagline {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .cv-contact-info {
   display: grid;
@@ -463,23 +495,23 @@ a {
 .cv-section-header {
   border-bottom: 1px solid var(--solarized-base1);
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* CV Skills */
 #cv-skills-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 .cv-skills-content {
   display: grid;
   grid-template-columns: 35% auto;
   grid-template-rows: 1fr 1fr 1fr;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
 .cv-skills-content > div {
-  padding-top: 5px;
+  padding-top: 4px;
 }
 .cv-skills-title {
   font-family: "Montserrat", sans-serif;
@@ -491,17 +523,17 @@ a {
 
 /* CV Exp */
 #cv-exp-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 .cv-exp-position {
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 .cv-exp-header {
   display: grid;
   grid-template-columns: auto 35%;
   grid-template-rows: auto auto;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+  margin-left: 0.8rem;
 }
 .cv-exp-employer {
   font-family: "Montserrat", sans-serif;
@@ -518,13 +550,13 @@ a {
   justify-self: end;
 }
 .cv-exp-summary {
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
 .cv-exp-highlights {
-  padding-left: 1rem;
+  padding-left: 0.8rem;
 }
 .cv-exp-highlights li {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .cv-exp-highlight-title {
   font-style: italic;
@@ -532,14 +564,14 @@ a {
 
 /* CV Edu */
 #cv-edu-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 .cv-edu-entry {
   display: grid;
   grid-template-columns: auto 20%;
   grid-template-rows: auto auto;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 .cv-edu-institution {
   font-family: "Montserrat", sans-serif;
@@ -552,14 +584,14 @@ a {
 
 /* CV Pubs */
 #cv-pubs-section {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 #cv-pubs-section ul {
   list-style: none;
-  padding-left: 1rem;
+  padding-left: 0.8rem;
 }
 #cv-pubs-section li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .journal {
   font-style: italic;
