@@ -1,11 +1,10 @@
-const Menu = ({ section, setSection, mode, setMode }) => {
+const Menu = ({ section, setSection, setMode }) => {
   const handleClick = (s) => {
     setSection(s);
   };
-  const updateMode = () => {
-    console.log("mode: " + mode);
-    setMode((cur) => {
-      return cur === "day" ? "night" : "day";
+  const handleMode = () => {
+    setMode((p) => {
+      return p === "day" ? "night" : "day";
     });
   };
   return (
@@ -25,6 +24,12 @@ const Menu = ({ section, setSection, mode, setMode }) => {
         </li>
       </ul>
       {/* <button onClick={updateMode}>{mode}</button> */}
+      <div id="day-night-toggle-container">
+        <button id="day-night-toggle" onClick={handleMode}>
+          <div id="day-toggle"></div>
+          <div id="night-toggle"></div>
+        </button>
+      </div>
     </menu>
   );
 };

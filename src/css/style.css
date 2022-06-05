@@ -7,12 +7,12 @@
   --solarized-base01: #586e75;
   --solarized-base00: #657b83;
   --solarized-base0: #839496;
+  --solarized-base0-half: #83949655;
   --solarized-base0-trans: #83949600;
   --solarized-base1: #93a1a1;
   --solarized-base2: #eee8d5;
   --solarized-base3: #fdf6e3;
   --solarized-yellow: #b58900;
-  --solarized-yellow-trans: #b5890000;
   --solarized-orange: #cb4b16;
   --solarized-red: #dc322f;
   --solarized-magenta: #d33682;
@@ -47,6 +47,10 @@
   --desert-night-dark: #5f0c38;
   --desert-night-light: #751441;
   --desert-night-lighter: #8d274c;
+
+  --desert-sun-yellow: #fdc82e;
+  --desert-sun-yellow-half: #fdc82e55;
+  --desert-sun-yellow-faded: #fdc82e00;
 }
 
 body {
@@ -154,8 +158,17 @@ a {
   height: 100%;
   justify-content: center;
   padding: 0 1rem;
+  /* margin: 5px; */
+  /* border: 1px solid var(--solarized-base02); */
   transition: color 2s;
   z-index: 50;
+}
+#header-content-inner {
+  border: 2px solid var(--solarized-base02);
+  /* margin: 0.5rem 0; */
+  height: 100%;
+  margin: 5px;
+  padding: 0.5rem;
 }
 #content.night #header-content {
   color: var(--solarized-base2);
@@ -240,21 +253,17 @@ a {
   width: 100%;
 }
 #day-night-toggle-container {
-  display: grid;
-  grid-column-start: 2;
-  grid-row-start: 1;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 #day-night-toggle {
-  border: 1px solid var(--solarized-base1);
+  border: 1px solid var(--solarized-blue);
   border-radius: 7px;
   background-color: inherit;
   display: flex;
   align-items: center;
   padding: 2px;
-  position: absolute;
-  top: -40px;
-  left: -40px;
 }
 #day-night-toggle > div {
   background-size: 100% 100%;
@@ -266,11 +275,14 @@ a {
 }
 #day-toggle {
   background: url("../img/sun.svg");
-  background-color: var(--solarized-yellow);
+  background-color: var(--desert-sun-yellow);
   border-radius: 7px;
 }
 #content.night #day-toggle {
-  background-color: var(--solarized-yellow-trans);
+  background-color: var(--desert-sun-yellow-faded);
+}
+#content.night #day-toggle:hover {
+  background-color: var(--desert-sun-yellow-half);
 }
 #night-toggle {
   background: url("../img/moon.svg");
@@ -278,8 +290,10 @@ a {
   border-radius: 7px;
 }
 #content.day #night-toggle {
-  background-color: none;
   background-color: var(--solarized-base0-trans);
+}
+#content.day #night-toggle:hover {
+  background-color: var(--solarized-base0-half);
 }
 #footer-area #day-ground {
   background: url("../img/desert-ground-day.png");

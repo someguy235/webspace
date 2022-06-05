@@ -11,12 +11,7 @@ const App = () => {
   return (
     <div id="content" className={mode}>
       <Header />
-      <Menu
-        section={section}
-        setSection={setSection}
-        mode={mode}
-        setMode={setMode}
-      />
+      <Menu section={section} setSection={setSection} setMode={setMode} />
       <div id="sections-area">
         <Sections section={section} mode={mode} />
       </div>
