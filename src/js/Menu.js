@@ -20,7 +20,7 @@ const Menu = ({ section, setSection, setMode }) => {
           <button onClick={() => handleClick("skills")}>Skills</button>
         </li>
         <li className={section === "cv" ? "selected" : ""}>
-          <button onClick={() => handleClick("cv")}>CV</button>
+          <button onClick={() => handleClick("cv")}>Résumé</button>
         </li>
       </ul>
       {/* <button onClick={updateMode}>{mode}</button> */}

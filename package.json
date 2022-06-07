@@ -16,6 +16,7 @@
     "@babel/core": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.3.2",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",

@@ -6,7 +6,13 @@ const ProjectTitle = ({ project }) => {
     <h3 className="project-title">
       {project.name
         .map((name, i) =>
-          project.link[i] ? <a href={project.link[i]}>{name}</a> : name
+          project.link[i] ? (
+            <a href={project.link[i]} target="_blank" rel="noreferrer">
+              {name}
+            </a>
+          ) : (
+            name
+          )
         )
         .reduce((prev, curr) => [prev, " / ", curr])}
     </h3>
@@ -26,7 +32,9 @@ const ProjectGit = ({ project }) => {
   if (!project.github) return null;
   return (
     <div className="project-git">
-      <a href={project.github}>GitHub &gt; someguy235 &gt; {project.name}</a>
+      <a href={project.github} target="_blank" rel="noreferrer">
+        GitHub &gt; someguy235 &gt; {project.name}
+      </a>
     </div>
   );
 };

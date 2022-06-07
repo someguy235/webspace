@@ -275,6 +275,11 @@ const CV = () => {
       <Experience />
       <Education />
       <Pubs />
+      <div className="resume-link">
+        <a href="/resources/files/Shepherd - Resume.pdf">
+          Shepherd - Resume.pdf
+        </a>
+      </div>
     </div>
   );
 };

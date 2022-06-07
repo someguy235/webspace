@@ -1,4 +1,4 @@
-import { StrictMode, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { render } from "react-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -8,6 +8,14 @@ import Sections from "./Sections";
 const App = () => {
   const [section, setSection] = useState("about");
   const [mode, setMode] = useState("day");
+  useEffect(() => {
+    if (window.matchMedia) {
+      const wantsDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      if (wantsDarkMode) setMode("night");
+    }
+  }, []);
   return (
     <div id="content" className={mode}>
       <Header />
