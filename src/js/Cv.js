@@ -26,7 +26,7 @@ const Skills = () => {
         </div>
         <div className="cv-skills-title">Frameworks/Libraries</div>
         <div className="cv-skills-list">
-          Spring/Boot, React, AngularJS, D3JS, jQuery, Selenium
+          Spring/Boot, React, AngularJS, D3JS, jQuery, Selenium, Cypress
         </div>
         <div className="cv-skills-title">Other</div>
         <div className="cv-skills-list">

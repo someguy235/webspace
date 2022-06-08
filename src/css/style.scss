@@ -61,6 +61,42 @@ a {
   color: $solarized-blue-light;
 }
 
+#content {
+  display: grid;
+  grid-column-gap: 3%;
+  row-gap: 50px;
+  grid-template-rows: 100px calc(100vh - 300px) 100px;
+  grid-template-columns: 10% 20% auto 10%;
+  grid-template-areas:
+    "header header header header"
+    ". nav content ."
+    "footer footer footer footer";
+  transition: all 2s;
+}
+@media (max-width: 1000px) {
+  #content {
+    grid-template-columns: 0 25% auto 0;
+  }
+}
+@media (max-width: 768px) {
+  #content {
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 100px 10vh calc(90vh - 260px) 100px;
+    grid-template-areas:
+      "header header header"
+      ". nav ."
+      ". content ."
+      "footer footer footer";
+    row-gap: 20px;
+  }
+}
+#content.day {
+  color: $solarized-base02;
+}
+#content.night {
+  color: $solarized-base2;
+}
+
 /*******/
 /* Sky */
 /*******/
@@ -104,25 +140,6 @@ a {
   z-index: -1;
   transition: all 2s;
 }
-#content {
-  display: grid;
-  grid-column-gap: 3%;
-  row-gap: 50px;
-  grid-template-rows: 100px calc(100vh - 300px) 100px;
-  grid-template-columns: 10% 20% auto 10%;
-  grid-template-areas:
-    "header header header header"
-    ". nav content ."
-    "footer footer footer footer";
-  transition: all 2s;
-}
-
-#content.day {
-  color: $solarized-base02;
-}
-#content.night {
-  color: $solarized-base2;
-}
 
 /**********/
 /* Header */
@@ -144,24 +161,16 @@ a {
   width: 100%;
 }
 @media (max-width: 1000px) {
-  #content {
-    grid-template-columns: 0 25% auto 0;
-  }
   #header-content-container {
     grid-template-columns: 0 25% auto 0;
   }
 }
 @media (max-width: 768px) {
-  #content {
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: 100px 25vh calc(75vh - 350px) 100px;
-    grid-template-areas:
-      "header header header"
-      ". nav ."
-      ". content ."
-      "footer footer footer";
+  #header-content-container {
+    grid-template-columns: 0 50% auto 0;
   }
 }
+
 #header-content {
   background-color: $solarized-blue;
   color: $solarized-base02;
@@ -185,12 +194,13 @@ a {
 }
 #header-area {
   .name {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .subname {
-    font-size: 1rem;
+    font-size: 1em;
   }
 }
+
 #header-grid {
   display: grid;
   grid-template-columns: repeat(100, 1fr);
@@ -390,7 +400,6 @@ a {
 #menu-area {
   font-family: "Montserrat", sans-serif;
   grid-area: nav;
-  // grid-column-start: 2;
   margin: 0;
   padding-left: 0;
   ul {
@@ -423,6 +432,21 @@ a {
   color: $solarized-base2;
 }
 
+@media (max-width: 768px) {
+  #menu-area ul {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1%;
+    li {
+      display: grid;
+      button {
+        color: inherit;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
 /************/
 /* Sections */
 /************/
@@ -443,6 +467,7 @@ a {
   float: right;
   margin-left: 1rem;
   margin-right: 5px;
+  margin-bottom: 10px;
   width: 300px;
 }
 #about-badges-container,
@@ -535,6 +560,21 @@ a {
   justify-content: flex-end;
   justify-items: flex-end;
 }
+@media (max-width: 768px) {
+  #cv-section {
+    font-size: 0.8rem;
+  }
+  #cv-header-section {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    row-gap: 0.5rem;
+  }
+  .cv-contact-info {
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
 .cv-section-header {
   border-bottom: 1px solid $solarized-base1;
   font-family: "Montserrat", sans-serif;
@@ -554,6 +594,15 @@ a {
   margin-left: 0.8rem;
   > div {
     padding-top: 4px;
+  }
+}
+@media (max-width: 768px) {
+  .cv-skills-content {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    > div {
+      // padding-top: 0;
+    }
   }
 }
 .cv-skills-title {
@@ -584,6 +633,7 @@ a {
 }
 .cv-exp-dates {
   justify-self: end;
+  text-align: end;
 }
 .cv-exp-title {
   font-style: italic;
@@ -623,6 +673,15 @@ a {
 .cv-edu-dates {
   display: grid;
   justify-content: end;
+}
+@media (max-width: 768px) {
+  .cv-edu-entry {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+  .cv-edu-dates {
+    justify-content: start;
+  }
 }
 
 /* CV Pubs */
