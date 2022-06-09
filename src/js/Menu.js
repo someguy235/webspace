@@ -23,7 +23,6 @@ const Menu = ({ section, setSection, setMode }) => {
           <button onClick={() => handleClick("cv")}>Résumé</button>
         </li>
       </ul>
-      {/* <button onClick={updateMode}>{mode}</button> */}
       <div id="day-night-toggle-container">
         <button id="day-night-toggle" onClick={handleMode}>
           <div id="day-toggle"></div>

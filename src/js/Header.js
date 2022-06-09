@@ -38,6 +38,7 @@ const HeaderSquare = ({ i, active }) => {
 
 const Header = () => {
   const [lifeArray, setLifeArray] = useState([]);
+  const [lifeIsRunning, setLifeIsRunning] = useState(false);
 
   const ROWS = 5,
     COLS = 100;
@@ -55,12 +56,15 @@ const Header = () => {
     });
   };
 
-  // useInterval(() => {
-  //   const newLife = updateLife();
-  //   setLifeArray(() => {
-  //     return newLife;
-  //   });
-  // }, 2000);
+  useInterval(
+    () => {
+      const newLife = updateLife();
+      setLifeArray(() => {
+        return newLife;
+      });
+    },
+    lifeIsRunning ? 1000 : null
+  );
 
   const checkArea = (x, y, a) => {
     let n = 0;
@@ -122,12 +126,12 @@ const Header = () => {
           <div className="name">Ethan Shepherd</div>
           <div className="subname">software developer</div>
         </div>
-        <div id="reset-button-container">
-          <div>
-            <button className="life-init-button" onClick={initLife}>
-              reset
-            </button>
-          </div>
+        <div id="life-button-container">
+          <button
+            className={"life-play-button " + (lifeIsRunning ? "pause" : "play")}
+            onClick={() => setLifeIsRunning(!lifeIsRunning)}
+          />
+          <button className="life-reset-button" onClick={initLife} />
         </div>
       </div>
     </header>

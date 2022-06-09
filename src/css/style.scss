@@ -44,6 +44,9 @@ $desert-sun-yellow: #fdc82e;
 $desert-sun-yellow-half: #fdc82e55;
 $desert-sun-yellow-faded: #fdc82e00;
 
+$medium-screen-break: 1100px;
+$small-screen-break: 768px;
+
 body {
   background-color: #ffffff;
   font-family: "Bitter", serif;
@@ -66,19 +69,19 @@ a {
   grid-column-gap: 3%;
   row-gap: 50px;
   grid-template-rows: 100px calc(100vh - 300px) 100px;
-  grid-template-columns: 10% 20% auto 10%;
+  grid-template-columns: 10% 15% auto 10%;
   grid-template-areas:
     "header header header header"
     ". nav content ."
     "footer footer footer footer";
-  transition: all 2s;
+  // transition: all 2s;
 }
-@media (max-width: 1000px) {
+@media (max-width: $medium-screen-break) {
   #content {
     grid-template-columns: 0 25% auto 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   #content {
     grid-template-columns: 10% auto 10%;
     grid-template-rows: 100px 10vh calc(90vh - 260px) 100px;
@@ -157,17 +160,19 @@ a {
 #header-content-container {
   display: grid;
   grid-column-gap: 3%;
-  grid-template-columns: 10% 20% auto 10%;
+  grid-template-columns: 10% 15% auto 10%;
   width: 100%;
 }
-@media (max-width: 1000px) {
+@media (max-width: $medium-screen-break) {
   #header-content-container {
     grid-template-columns: 0 25% auto 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   #header-content-container {
-    grid-template-columns: 0 50% auto 0;
+    // grid-template-columns: 0 50% auto 0;
+    grid-template-columns: 13% auto 16% 16%;
+    grid-gap: 0;
   }
 }
 
@@ -244,22 +249,42 @@ a {
 .grid-square-active-2 {
   background: $solarized-violet-faded;
 }
-#reset-button-container {
+#life-button-container {
   align-items: end;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: end;
 }
-#reset-button-container div {
-  display: flex;
-}
-.life-init-button {
+#life-button-container button {
   background-color: $solarized-blue;
+  background-position: center;
+  background-repeat: no-repeat;
   border: none;
-  font-family: inherit;
-  font-size: inherit;
-  padding: 5px;
-  z-index: 100;
+  border-radius: 3px;
+  display: flex;
+  height: 2rem;
+  margin-left: 5px;
+  width: 2rem;
+  z-index: 1;
+}
+@media (max-width: $small-screen-break) {
+  #life-button-container {
+    display: none;
+  }
+}
+.life-play-button {
+  &.play {
+    background: url("../img/controls/play.svg");
+    background-size: 100% 100%;
+  }
+  &.pause {
+    background: url("../img/controls/pause.svg");
+    background-size: 80% 80%;
+  }
+}
+.life-reset-button {
+  background: url("../img/controls/reset.svg");
+  background-size: 85% 85%;
 }
 
 /**********/
@@ -284,6 +309,7 @@ a {
   justify-content: center;
   width: 100%;
 }
+
 #day-night-toggle {
   align-items: center;
   background-color: inherit;
@@ -301,7 +327,7 @@ a {
   }
 }
 #day-toggle {
-  background: url("../img/sun.svg");
+  background: url("../img/controls/sun.svg");
   background-color: $desert-sun-yellow;
   border-radius: 7px;
 }
@@ -314,7 +340,7 @@ a {
   }
 }
 #night-toggle {
-  background: url("../img/moon.svg");
+  background: url("../img/controls/moon.svg");
   background-color: $solarized-base0;
   border-radius: 7px;
 }
@@ -338,6 +364,16 @@ a {
     grid-column-start: 2;
     grid-row-start: 1;
     transition: all 2s;
+  }
+}
+@media (max-width: 800px) {
+  #footer-area {
+    #day-ground {
+      background-size: 800px;
+    }
+    #night-ground {
+      background-size: 800px;
+    }
   }
 }
 .footer-left {
@@ -432,7 +468,7 @@ a {
   color: $solarized-base2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   #menu-area ul {
     display: grid;
     grid-template-columns: repeat(4, 24%);
@@ -470,6 +506,11 @@ a {
   margin-bottom: 10px;
   width: 300px;
 }
+// @media (max-width: $small-screen-break) {
+//   #self-portrait {
+//     width: 100px;
+//   }
+// }
 #about-badges-container,
 #about-contact-container {
   display: flex;
@@ -560,7 +601,7 @@ a {
   justify-content: flex-end;
   justify-items: flex-end;
 }
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   #cv-section {
     font-size: 0.8rem;
   }
@@ -596,13 +637,10 @@ a {
     padding-top: 4px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   .cv-skills-content {
     grid-template-columns: auto;
     grid-template-rows: repeat(6, auto);
-    > div {
-      // padding-top: 0;
-    }
   }
 }
 .cv-skills-title {
@@ -674,7 +712,7 @@ a {
   display: grid;
   justify-content: end;
 }
-@media (max-width: 768px) {
+@media (max-width: $small-screen-break) {
   .cv-edu-entry {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
