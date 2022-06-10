@@ -102,6 +102,12 @@ const Header = () => {
     initLife();
   }, []);
 
+  const play = "▶";
+  const pause = "⏸︎";
+  const reset = "↻";
+
+  const playPause = lifeIsRunning ? pause : play;
+
   return (
     <header id="header-area">
       <div id="header-grid">
@@ -130,8 +136,12 @@ const Header = () => {
           <button
             className={"life-play-button " + (lifeIsRunning ? "pause" : "play")}
             onClick={() => setLifeIsRunning(!lifeIsRunning)}
-          />
-          <button className="life-reset-button" onClick={initLife} />
+          >
+            {playPause}
+          </button>
+          <button className="life-reset-button" onClick={initLife}>
+            {reset}
+          </button>
         </div>
       </div>
     </header>

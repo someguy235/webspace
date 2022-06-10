@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&family=Noto+Sans+Symbols+2&display=swap");
 
 $main-palette-color: #778ccc;
 $solarized-base03: #002b36;
@@ -74,7 +74,7 @@ a {
     "header header header header"
     ". nav content ."
     "footer footer footer footer";
-  // transition: all 2s;
+  transition: color 2s;
 }
 @media (max-width: $medium-screen-break) {
   #content {
@@ -170,7 +170,6 @@ a {
 }
 @media (max-width: $small-screen-break) {
   #header-content-container {
-    // grid-template-columns: 0 50% auto 0;
     grid-template-columns: 13% auto 16% 16%;
     grid-gap: 0;
   }
@@ -256,16 +255,27 @@ a {
   justify-content: end;
 }
 #life-button-container button {
+  align-items: center;
   background-color: $solarized-blue;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
   border-radius: 3px;
   display: flex;
+  font-family: "Noto Sans Symbols 2", sans-serif;
+  font-size: 1.4rem;
   height: 2rem;
+  justify-content: center;
   margin-left: 5px;
+  transition: color 2s;
   width: 2rem;
   z-index: 1;
+}
+#life-button-container button:hover {
+  background-color: $solarized-blue-faded;
+}
+.night #life-button-container button {
+  color: $solarized-base2;
 }
 @media (max-width: $small-screen-break) {
   #life-button-container {
@@ -273,18 +283,16 @@ a {
   }
 }
 .life-play-button {
+  transition: fill 2s;
   &.play {
-    background: url("../img/controls/play.svg");
-    background-size: 100% 100%;
+    padding-top: 7px;
   }
   &.pause {
-    background: url("../img/controls/pause.svg");
-    background-size: 80% 80%;
+    padding-top: 7px;
   }
 }
 .life-reset-button {
-  background: url("../img/controls/reset.svg");
-  background-size: 85% 85%;
+  padding-top: 5px;
 }
 
 /**********/
