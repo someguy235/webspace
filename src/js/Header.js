@@ -104,7 +104,7 @@ const Header = () => {
 
   const play = "▶";
   const pause = "⏸︎";
-  const reset = "↻";
+  const reset = "⟳";
 
   const playPause = lifeIsRunning ? pause : play;
 

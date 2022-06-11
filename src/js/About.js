@@ -16,8 +16,8 @@ const About = () => {
         Hi, I&apos;m Ethan Shepherd, a full-stack Java/JavaScript developer
         building web and science data applications in fabulous Las Vegas, NV.
         I&apos;ve worked on everything from satellite data products using C and
-        Fortran, to Spring MVC apps on Oracle, to SPAs with Node, Angular, and
-        React.
+        Fortran, to Spring MVC apps on Oracle, to SPAs with Node, Mongo,
+        Angular, and React.
       </p>
       <p>
         I&apos;m currently focussed on making scientific data accessible and
@@ -26,12 +26,14 @@ const About = () => {
         data sources of climate research: first helping modernize climate model
         distribution with tools like BitTorrent, then working to operationalize
         authoritative remote sensing-based Climate Data Records, building ingest
-        and access tools for in situ sensor networks, and finally building web
-        applications and processing tools for paleoclimatological data.
+        and access tools for <span className="italic">in situ</span> sensor
+        networks, and finally building web applications and processing tools for
+        paleoclimatological data.
       </p>
       <p>
-        This page is a collection of some of the things I&apos;ve built, either
-        for my job or to learn something new.
+        When I&apos;m not coding for fun or profit, you can catch me running in
+        the early morning to beat the Nevada heat, or hiking around the desert
+        Southwest.
       </p>
       <div id="about-contact-container">
         <div id="about-contact">

@@ -7,7 +7,12 @@ const ProjectTitle = ({ project }) => {
       {project.name
         .map((name, i) =>
           project.link[i] ? (
-            <a href={project.link[i]} target="_blank" rel="noreferrer">
+            <a
+              href={project.link[i]}
+              key={name}
+              target="_blank"
+              rel="noreferrer"
+            >
               {name}
             </a>
           ) : (
@@ -44,11 +49,13 @@ const ProjectImg = ({ project }) => {
   return (
     <div className="project-imgs">
       {project.img.map((img) => (
-        <img
-          key={img.alt}
-          src={`data:${img.mime};base64,${img.data}`}
-          alt={img.alt}
-        />
+        <div key={img.alt}>
+          <img
+            key={img.alt}
+            src={`data:${img.mime};base64,${img.data}`}
+            alt={img.alt}
+          />
+        </div>
       ))}
     </div>
   );
