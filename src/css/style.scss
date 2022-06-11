@@ -259,15 +259,11 @@ a {
   background-color: $solarized-blue;
   border: none;
   border-radius: 3px;
-  display: flex;
-  font-family: "Noto Sans Symbols 2", sans-serif;
-  font-size: 1.4rem;
-  // font-size: 20px;
+  display: grid;
+  grid-template-rows: 100%;
   height: 2rem;
-  justify-content: center;
-  line-height: inherit;
   margin-left: 5px;
-  transition: color 2s;
+  padding: 2px;
   width: 2rem;
   z-index: 1;
 }
@@ -282,17 +278,47 @@ a {
     display: none;
   }
 }
-.life-play-button {
-  transition: fill 2s;
-  &.play {
-    padding-top: 7px;
-  }
-  &.pause {
-    padding-top: 7px;
+.play-button-container,
+.pause-button-container,
+.reset-button-container {
+  display: grid;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  > div {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    transition: opacity 2s;
+    > img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
-.life-reset-button {
-  padding-top: 5px;
+.day .life-icon-night {
+  opacity: 0;
+}
+
+.night .life-icon {
+  opacity: 0;
+}
+
+.life-play-button {
+  &.play {
+    .pause-button-container {
+      opacity: 0;
+    }
+  }
+  &.pause {
+    .play-button-container {
+      opacity: 0;
+    }
+  }
 }
 
 /**********/

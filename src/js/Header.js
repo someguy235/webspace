@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
+import play from "../img/controls/play.png";
+import play_night from "../img/controls/play-night.png";
+import pause from "../img/controls/pause.png";
+import pause_night from "../img/controls/pause-night.png";
+import reset from "../img/controls/reset.png";
+import reset_night from "../img/controls/reset-night.png";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -102,12 +108,6 @@ const Header = () => {
     initLife();
   }, []);
 
-  const play = "▶";
-  const pause = "⏸︎";
-  const reset = "⟳";
-
-  const playPause = lifeIsRunning ? pause : play;
-
   return (
     <header id="header-area">
       <div id="header-grid">
@@ -137,10 +137,32 @@ const Header = () => {
             className={"life-play-button " + (lifeIsRunning ? "pause" : "play")}
             onClick={() => setLifeIsRunning(!lifeIsRunning)}
           >
-            {playPause}
+            <div className="play-button-container">
+              <div className="life-icon">
+                <img src={play} alt="play button" />
+              </div>
+              <div className="life-icon-night">
+                <img src={play_night} alt="play button at night" />
+              </div>
+            </div>
+            <div className="pause-button-container">
+              <div className="life-icon">
+                <img src={pause} alt="pause button" />
+              </div>
+              <div className="life-icon-night">
+                <img src={pause_night} alt="pause button at night" />
+              </div>
+            </div>
           </button>
           <button className="life-reset-button" onClick={initLife}>
-            {reset}
+            <div className="reset-button-container">
+              <div className="life-icon">
+                <img src={reset} alt="reset button" />
+              </div>
+              <div className="life-icon-night">
+                <img src={reset_night} alt="reset button at night" />
+              </div>
+            </div>
           </button>
         </div>
       </div>
