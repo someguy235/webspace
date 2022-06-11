@@ -18,4 +18,4 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
-          script: deploy/deploy-webspace.sh
+          script: deploy-scripts/deploy-webspace.sh
