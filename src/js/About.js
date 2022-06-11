@@ -1,7 +1,7 @@
 import github_logo from "../img/logos/github.png";
 import linkedin_logo from "../img/logos/linkedin.png";
 import stack_logo from "../img/logos/stackoverflow.png";
-import profile from "../img/profile-2.jpg";
+import profile from "../img/profile-3.jpg";
 
 const About = () => {
   return (
