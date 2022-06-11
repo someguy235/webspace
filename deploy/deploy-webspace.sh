@@ -21,4 +21,4 @@ echo "copy static resources..."
 cp ./resources/files/* ./dist
 
 echo "restarting server..."
-sudo systemctl reload nginx
+sudo /usr/sbin/service nginx restart
