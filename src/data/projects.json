@@ -2,7 +2,7 @@
   {
     "name": ["SetListr"],
     "link": ["https://www.ethanshepherd.com/setlistr"],
-    "tech": ["ReactJS", "NodeJS", "Express", "MongoDB"],
+    "tech": ["ReactJS", "TypeScript", "NodeJS", "MongoDB", "Express"],
     "github": "http://github.com/someguy235/setlistr",
     "img": [
       {
@@ -16,7 +16,7 @@
   {
     "name": ["NCEI Normals Quick Access"],
     "link": ["https://www.ncei.noaa.gov/access/us-climate-normals/"],
-    "tech": ["ReactJS", "ReCharts"],
+    "tech": ["ReactJS"],
     "github": "",
     "img": [
       {
@@ -47,7 +47,7 @@
       "https://www.ncei.noaa.gov/access/paleo-search/",
       "https://www.ncei.noaa.gov/access/paleo-search/api"
     ],
-    "tech": ["Java", "Spring", "Oracle", "iBatis", "ReactJS"],
+    "tech": ["ReactJS", "D3JS", "Java", "Spring", "Oracle"],
     "github": "",
     "img": [
       {
@@ -61,7 +61,7 @@
   {
     "name": ["Lifetracker"],
     "link": [""],
-    "tech": ["Android", "achartengine", "NodeJS", "ReactJS"],
+    "tech": ["Android"],
     "github": "http://github.com/someguy235/lifetracker",
     "img": [
       {
@@ -85,7 +85,7 @@
   {
     "name": ["NCEI Climate Atlas"],
     "link": ["https://www.ncei.noaa.gov/access/climateatlas/"],
-    "tech": ["jQuery", "Bootstrap"],
+    "tech": ["jQuery"],
     "github": "",
     "img": [
       {
@@ -100,7 +100,7 @@
   {
     "name": ["Asheville Crime Mapper"],
     "link": [""],
-    "tech": ["AngularJS", "NodeJS", "LeafletJS", "MongoDB", "Bootstrap"],
+    "tech": ["AngularJS", "NodeJS", "LeafletJS", "MongoDB"],
     "github": "http://github.com/someguy235/avlcrime",
     "img": [
       {
@@ -120,7 +120,7 @@
       "http://www.ncei.noaa.gov/access/homr",
       "http://www.ncei.noaa.gov/access/homr/api"
     ],
-    "tech": ["Java", "Spring", "Oracle", "iBatis", "jQuery", "D3JS"],
+    "tech": ["jQuery", "D3JS", "Java", "Spring", "Oracle"],
     "github": "",
     "img": [
       {
@@ -134,7 +134,7 @@
   {
     "name": ["Friendly Library"],
     "link": [""],
-    "tech": ["Groovy", "Grails", "JavaScript", "AngularJS", "Postgres"],
+    "tech": ["Groovy", "Grails", "AngularJS", "Postgres"],
     "github": "http://github.com/someguy235/friendlibrary",
     "img": [
       {
@@ -148,7 +148,7 @@
   {
     "name": ["Asheville Transit Mobile"],
     "link": [""],
-    "tech": ["JavaScript", "Google Maps API", "Bootstrap", "Groovy"],
+    "tech": ["JavaScript", "Groovy"],
     "github": "http://github.com/someguy235/asheville-transit",
     "img": [
       {
@@ -162,7 +162,7 @@
   {
     "name": ["Robot Race"],
     "link": [""],
-    "tech": ["Java", "Swing"],
+    "tech": ["Java"],
     "github": "http://github.com/someguy235/robotRace",
     "img": [
       {
