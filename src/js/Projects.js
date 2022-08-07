@@ -17,6 +17,9 @@ import python_logo from "../img/logos/python.png";
 import react_logo from "../img/logos/react.png";
 import ts_logo from "../img/logos/typescript.png";
 
+//eslint-disable-next-line
+import * as projectImages from "../img/imagecompressor/*.png";
+
 const ProjectTitle = ({ project }) => {
   if (!project.name) return null;
   return (
@@ -97,7 +100,8 @@ const ProjectImg = ({ project }) => {
         <div key={img.alt}>
           <img
             key={img.alt}
-            src={`data:${img.mime};base64,${img.data}`}
+            src={projectImages[img.src]}
+            title={img.alt}
             alt={img.alt}
           />
         </div>
@@ -118,7 +122,7 @@ const ProjectDesc = ({ project }) => {
 
 const Project = ({ project }) => {
   return (
-    <div className="project">
+    <div className="project" id={project.id}>
       <ProjectTitle project={project} />
       <ProjectTech project={project} />
       <ProjectGit project={project} />

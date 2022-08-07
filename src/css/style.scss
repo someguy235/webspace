@@ -47,6 +47,8 @@ $desert-sun-yellow-faded: #fdc82e00;
 $medium-screen-break: 1100px;
 $small-screen-break: 768px;
 
+$transition-time: 0.5s;
+
 body {
   background-color: #ffffff;
   font-family: "Bitter", serif;
@@ -57,7 +59,7 @@ body {
 
 a {
   text-decoration: none;
-  transition: color 2s;
+  transition: color $transition-time;
   color: $solarized-blue;
 }
 .night a {
@@ -74,7 +76,7 @@ a {
     "header header header header"
     ". nav content ."
     "footer footer footer footer";
-  transition: color 2s;
+  transition: color $transition-time;
 }
 @media (max-width: $medium-screen-break) {
   #content {
@@ -127,7 +129,7 @@ a {
   grid-row-start: 1;
   grid-row-end: 2;
   z-index: -1;
-  transition: opacity 2s;
+  transition: opacity $transition-time;
 }
 #night-sky {
   background: linear-gradient(
@@ -141,7 +143,7 @@ a {
   width: 100%;
   height: 100%;
   z-index: -1;
-  transition: opacity 2s;
+  transition: opacity $transition-time;
 }
 
 /**********/
@@ -184,7 +186,7 @@ a {
   height: 100%;
   justify-content: center;
   padding: 0 1rem;
-  transition: color 2s;
+  transition: color $transition-time;
   z-index: 50;
 }
 #header-content-inner {
@@ -261,10 +263,10 @@ a {
   border-radius: 3px;
   display: grid;
   grid-template-rows: 100%;
-  height: 2rem;
+  height: 1.5rem;
   margin-left: 5px;
   padding: 2px;
-  width: 2rem;
+  width: 1.5rem;
   z-index: 1;
 }
 #life-button-container button:hover {
@@ -293,7 +295,7 @@ a {
     display: grid;
     grid-column-start: 1;
     grid-row-start: 1;
-    transition: opacity 2s;
+    transition: opacity $transition-time;
     > img {
       height: 100%;
       width: 100%;
@@ -390,14 +392,14 @@ a {
     background-size: 100% 100%;
     grid-column-start: 2;
     grid-row-start: 1;
-    transition: opacity 2s;
+    transition: opacity $transition-time;
   }
   #night-ground {
     background: url("../img/desert-ground-night.png");
     background-size: 100% 100%;
     grid-column-start: 2;
     grid-row-start: 1;
-    transition: opacity 2s;
+    transition: opacity $transition-time;
   }
 }
 @media (max-width: 800px) {
@@ -417,7 +419,7 @@ a {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-template-rows: 43% 5% 21% 19% 12%;
-  transition: opacity 2s;
+  transition: opacity $transition-time;
 }
 .footer-right {
   display: grid;
@@ -426,7 +428,7 @@ a {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-template-rows: 51% 0 19% 11% 19%;
-  transition: opacity 2s;
+  transition: opacity $transition-time;
 }
 .footer-side-day {
   .desert-sky {
@@ -492,7 +494,7 @@ a {
         font-family: inherit;
         font-size: 1.2rem;
         padding: 0.5rem 0;
-        transition: color 2s;
+        transition: color $transition-time;
         width: 100%;
       }
     }
@@ -621,6 +623,40 @@ a {
   }
 }
 
+#personal-website img {
+  transition: opacity $transition-time;
+}
+#personal-website .project-imgs {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  div {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    &:first-of-type img {
+      opacity: 1;
+    }
+    &:last-of-type img {
+      opacity: 0;
+    }
+  }
+}
+.night #personal-website .project-imgs {
+  div {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    &:first-of-type img {
+      opacity: 0;
+    }
+    &:last-of-type img {
+      opacity: 1;
+    }
+  }
+}
 /******/
 /* CV */
 /******/

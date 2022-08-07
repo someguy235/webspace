@@ -113,17 +113,21 @@ const Header = () => {
       <div id="header-grid">
         {lifeArray.map((e, i) =>
           e.map((f, j) => (
-            <SwitchTransition key={i + 1 * j + 1} mode="out-in">
-              <CSSTransition
-                key={f}
-                classNames={{
-                  enter: "grid-square-enter",
-                }}
-                timeout={500}
-              >
-                <HeaderSquare i={(i + 1 * j + 1) % 3} active={f} />
-              </CSSTransition>
-            </SwitchTransition>
+            // <SwitchTransition key={i + 1 * j + 1} mode="out-in">
+            //   <CSSTransition
+            //     key={f}
+            //     classNames={{
+            //       enter: "grid-square-enter",
+            //     }}
+            //     timeout={200}
+            //   >
+            <HeaderSquare
+              i={(i + 1 * j + 1) % 3}
+              active={f}
+              key={i + 1 * j + 1}
+            />
+            //   </CSSTransition>
+            // </SwitchTransition>
           ))
         )}
       </div>
