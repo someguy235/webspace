@@ -12,10 +12,12 @@ import leaflet_logo from "../img/logos/leaflet.png";
 import mongo_logo from "../img/logos/mongo.png";
 import node_logo from "../img/logos/node.png";
 import opencv_logo from "../img/logos/opencv.png";
+import passport_logo from "../img/logos/passport.png";
 import postgres_logo from "../img/logos/postgres.png";
 import python_logo from "../img/logos/python.png";
 import react_logo from "../img/logos/react.png";
 import ts_logo from "../img/logos/typescript.png";
+import vue_logo from "../img/logos/vue.png";
 
 //eslint-disable-next-line
 import * as projectImages from "../img/imagecompressor/*.png";
@@ -59,10 +61,12 @@ const ProjectTech = ({ project }) => {
     MongoDB: mongo_logo,
     NodeJS: node_logo,
     OpenCV: opencv_logo,
+    PassportJS: passport_logo,
     Postgres: postgres_logo,
     Python: python_logo,
     ReactJS: react_logo,
     TypeScript: ts_logo,
+    VueJS: vue_logo,
   };
   return (
     <div className="project-tech">
