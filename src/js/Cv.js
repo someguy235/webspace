@@ -21,7 +21,7 @@ const Skills = () => {
       <div className="cv-skills-content">
         <div className="cv-skills-title">Languages</div>
         <div className="cv-skills-list">
-          <span className="cv-skills-tier">Primary</span>: Java, JavaScript{" "}
+          <span className="cv-skills-tier">Primary</span>: JavaScript, Java{" "}
           <span className="cv-skills-tier">Secondary</span>: Groovy, Python, C
         </div>
         <div className="cv-skills-title">Frameworks/Libraries</div>
@@ -30,7 +30,7 @@ const Skills = () => {
         </div>
         <div className="cv-skills-title">Other</div>
         <div className="cv-skills-list">
-          Oracle, iBatis, MongoDB, Selenium, Cypress, MySQL, Git/SVN, Linux
+          Oracle, iBatis, MongoDB, Selenium, Cypress, Git/SVN, Linux
         </div>
       </div>
     </div>
