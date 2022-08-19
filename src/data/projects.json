@@ -1,7 +1,7 @@
 [
   {
     "name": ["Ranger"],
-    "link": [""],
+    "link": ["https://www.ethanshepherd.com/ranger/?user=ems"],
     "tech": ["VueJS", "LeafletJS", "PassportJS", "MongoDB", "Express"],
     "github": "http://github.com/someguy235/ranger",
     "img": [
@@ -10,7 +10,7 @@
         "src": "ranger-min"
       }
     ],
-    "desc": "I've visited a lot of the US National Parks over the last few years, and I wanted a way to visualize those trips, the parks I have and haven't been to, etc. Filter trips and/or parks, and display routes and locations on a Leaflet Mapbox map. Includes Passport/JWT auth layer enabling user sign-ups, and a full set of 63 custom-made parks icons. Work in progress (98/100%)."
+    "desc": "I've visited a lot of the US National Parks over the last few years, and I wanted a way to visualize those trips, the parks I have and haven't been to, etc. Filter trips and/or parks, and display routes and locations on a Leaflet Mapbox map. Includes Passport/JWT auth layer enabling user sign-ups, and a full set of 63 custom-made parks icons."
   },
   {
     "name": ["SetListr"],

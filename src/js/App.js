@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import Menu from "./Menu";
 import Sections from "./Sections";
 
+// TODO: convert to TS
+
 const App = () => {
   const [section, setSection] = useState("about");
   const [mode, setMode] = useState("day");
