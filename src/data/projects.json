@@ -23,7 +23,7 @@
         "src": "setlist-min"
       }
     ],
-    "desc": "I started listening to jam band sets on my long weekend runs, and was wondering which ones had the highest ratio of my favorite songs. I made this tool to answer that question. Built with React and Express on the Spotify API, also caches album info in a MongoDB instance. Learned a lot about how messy Spotify metadata is."
+    "desc": "I started listening to jam band sets on my long weekend runs, and was wondering which ones had the highest ratio of my favorite songs. I made this tool to answer that question. Built with React and Express on the Spotify API, also caches album info in a MongoDB instance."
   },
   {
     "name": ["Personal Website"],
