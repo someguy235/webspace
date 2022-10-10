@@ -260,7 +260,7 @@ const Pubs = () => {
         </li>
         <li>
           Shepherd, E. (2009, Dec). Using BitTorrent for Large Scale Data
-          Distribution. Paper presented at the 2009 meeting of the American
+          Distribution. Poster presented at the 2009 meeting of the American
           Geophysical Union, San Francisco.
         </li>
       </ul>

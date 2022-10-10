@@ -635,25 +635,33 @@ a {
     grid-column-end: 1;
     grid-row-start: 0;
     grid-row-end: 1;
-    &:first-of-type img {
-      opacity: 1;
+    &:first-of-type {
+      z-index: 1;
+      img {
+        opacity: 1;
+      }
     }
-    &:last-of-type img {
-      opacity: 0;
+    &:last-of-type {
+      z-index: 0;
+      img {
+        opacity: 0;
+      }
     }
   }
 }
 .night #personal-website .project-imgs {
   div {
-    grid-column-start: 0;
-    grid-column-end: 1;
-    grid-row-start: 0;
-    grid-row-end: 1;
-    &:first-of-type img {
-      opacity: 0;
+    &:first-of-type {
+      z-index: 0;
+      img {
+        opacity: 0;
+      }
     }
-    &:last-of-type img {
-      opacity: 1;
+    &:last-of-type {
+      z-index: 1;
+      img {
+        opacity: 1;
+      }
     }
   }
 }
