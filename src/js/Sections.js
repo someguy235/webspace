@@ -1,6 +1,5 @@
 import About from "./About";
 import Projects from "./Projects";
-import Skills from "./Skills";
 import CV from "./Cv";
 
 const Sections = ({ section, mode }) => {
@@ -9,8 +8,6 @@ const Sections = ({ section, mode }) => {
       return <About mode={mode} />;
     case "projects":
       return <Projects />;
-    case "skills":
-      return <Skills />;
     case "cv":
       return <CV />;
   }
