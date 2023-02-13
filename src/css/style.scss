@@ -532,7 +532,10 @@ a {
 /* About */
 /*********/
 #about-section {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  p:first-of-type {
+    margin-top: 0.5rem;
+  }
 }
 #self-portrait {
   border: 1px solid $solarized-base1;

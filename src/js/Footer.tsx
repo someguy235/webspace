@@ -1,4 +1,7 @@
-const Footer = ({ mode }) => {
+type FooterParams = {
+  mode: string;
+};
+const Footer = ({ mode }: FooterParams) => {
   return (
     <footer id="footer-area">
       <div

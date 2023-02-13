@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { CSSTransition, SwitchTransition } from "react-transition-group";
+// import { CSSTransition, SwitchTransition } from "react-transition-group";
 import play from "../img/controls/play.png";
 import play_night from "../img/controls/play-night.png";
 import pause from "../img/controls/pause.png";
@@ -7,8 +7,8 @@ import pause_night from "../img/controls/pause-night.png";
 import reset from "../img/controls/reset.png";
 import reset_night from "../img/controls/reset-night.png";
 
-function useInterval(callback, delay) {
-  const savedCallback = useRef();
+function useInterval(callback: Function, delay: number | null) {
+  const savedCallback = useRef<Function>();
 
   // Remember the latest callback.
   useEffect(() => {
@@ -18,7 +18,7 @@ function useInterval(callback, delay) {
   // Set up the interval.
   useEffect(() => {
     function tick() {
-      savedCallback.current();
+      if (savedCallback.current) savedCallback.current();
     }
     if (delay !== null) {
       let id = setInterval(tick, delay);
@@ -27,11 +27,15 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-const getRandomLife = (seed) => {
+const getRandomLife = (seed: number) => {
   return Math.floor(Math.random() * seed) === seed - 1;
 };
 
-const HeaderSquare = ({ i, active }) => {
+type HeaderSquareParams = {
+  i: number;
+  active: boolean;
+};
+const HeaderSquare = ({ i, active }: HeaderSquareParams) => {
   return (
     <div
       className={
@@ -43,14 +47,14 @@ const HeaderSquare = ({ i, active }) => {
 };
 
 const Header = () => {
-  const [lifeArray, setLifeArray] = useState([]);
+  const [lifeArray, setLifeArray] = useState<boolean[][]>([]);
   const [lifeIsRunning, setLifeIsRunning] = useState(false);
 
   const ROWS = 5,
     COLS = 100;
 
   const initLife = () => {
-    let tempLife = [];
+    let tempLife: boolean[][] = [];
     for (let i = 0; i < ROWS; i++) {
       tempLife.push([]);
       for (let j = 0; j < COLS; j++) {
@@ -72,7 +76,7 @@ const Header = () => {
     lifeIsRunning ? 1000 : null
   );
 
-  const checkArea = (x, y, a) => {
+  const checkArea = (x: number, y: number, a: boolean[][]) => {
     let n = 0;
     for (let i = -1; i <= 1; i++) {
       for (let j = -1; j <= 1; j++) {
@@ -89,7 +93,7 @@ const Header = () => {
   };
 
   const updateLife = () => {
-    let tempLife = [];
+    let tempLife: boolean[][] = [];
     for (let i = 0; i < ROWS; i++) {
       tempLife.push([]);
       for (let j = 0; j < COLS; j++) {

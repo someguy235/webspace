@@ -5,8 +5,6 @@ import Footer from "./Footer";
 import Menu from "./Menu";
 import Sections from "./Sections";
 
-// TODO: convert to TS
-
 const App = () => {
   const [section, setSection] = useState("about");
   const [mode, setMode] = useState("day");
@@ -23,9 +21,9 @@ const App = () => {
       <Header />
       <Menu section={section} setSection={setSection} setMode={setMode} />
       <div id="sections-area">
-        <Sections section={section} mode={mode} />
+        <Sections section={section} />
       </div>
-      <Footer mode={mode} setMode={setMode} />
+      <Footer mode={mode} />
       <div id="day-sky-container">
         <div id="day-sky-grid-container">
           <div style={{ opacity: mode === "day" ? 1 : 0 }} id="day-sky"></div>

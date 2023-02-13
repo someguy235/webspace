@@ -1,4 +1,5 @@
-import projects from "../data/projects.json";
+import _projects from "../data/projects.json";
+const projects = _projects as Project[];
 
 import android_logo from "../img/logos/android.png";
 import angularjs_logo from "../img/logos/angularjs.png";
@@ -22,7 +23,22 @@ import vue_logo from "../img/logos/vue.png";
 //eslint-disable-next-line
 import * as projectImages from "../img/imagecompressor/*.png";
 
-const ProjectTitle = ({ project }) => {
+type Project = {
+  id: string;
+  name: string[];
+  link: string[];
+  tech: string[];
+  github: string;
+  img: {
+    alt: string;
+    src: string;
+  }[];
+  desc: string;
+};
+type ProjectProps = {
+  project: Project;
+};
+const ProjectTitle = ({ project }: ProjectProps) => {
   if (!project.name) return null;
   return (
     <h3 className="project-title">
@@ -41,14 +57,14 @@ const ProjectTitle = ({ project }) => {
             name
           )
         )
-        .reduce((prev, curr) => [prev, " / ", curr])}
+        .reduce((prev, curr) => prev + " / " + curr)}
     </h3>
   );
 };
 
-const ProjectTech = ({ project }) => {
+const ProjectTech = ({ project }: ProjectProps) => {
   if (!project.tech || project.tech.length === 0) return null;
-  const logoMap = {
+  const logoMap: { [key: string]: any } = {
     Android: android_logo,
     AngularJS: angularjs_logo,
     D3JS: d3_logo,
@@ -85,7 +101,7 @@ const ProjectTech = ({ project }) => {
   );
 };
 
-const ProjectGit = ({ project }) => {
+const ProjectGit = ({ project }: ProjectProps) => {
   if (!project.github) return null;
   return (
     <div className="project-git">
@@ -96,7 +112,7 @@ const ProjectGit = ({ project }) => {
   );
 };
 
-const ProjectImg = ({ project }) => {
+const ProjectImg = ({ project }: ProjectProps) => {
   if (!project.img || project.img.length === 0) return null;
   return (
     <div className="project-imgs">
@@ -114,7 +130,7 @@ const ProjectImg = ({ project }) => {
   );
 };
 
-const ProjectDesc = ({ project }) => {
+const ProjectDesc = ({ project }: ProjectProps) => {
   if (!project.desc) return null;
   return (
     <div
@@ -124,7 +140,7 @@ const ProjectDesc = ({ project }) => {
   );
 };
 
-const Project = ({ project }) => {
+const Project = ({ project }: ProjectProps) => {
   return (
     <div className="project" id={project.id}>
       <ProjectTitle project={project} />
@@ -140,7 +156,7 @@ const Projects = () => {
   return (
     <section id="projects-section">
       {projects.map((project) => (
-        <Project key={project.name} project={project} />
+        <Project key={project.name[0]} project={project} />
       ))}
     </section>
   );
