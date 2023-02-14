@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&family=Bitter&display=swap");
 
 $main-palette-color: #778ccc;
 $solarized-base03: #002b36;
@@ -19,6 +19,7 @@ $solarized-violet: #6c71c4;
 $solarized-violet-faded: #6c71c433;
 $solarized-blue: #268bd2;
 $solarized-blue-faded: #268bd233;
+$solarized-blue-less-faded: #268bd2aa;
 $solarized-blue-light: hsl(204.8, 69.4%, 80%);
 $solarized-cyan: #2aa198;
 $solarized-cyan-faded: #2aa19833;
@@ -34,11 +35,19 @@ $desert-day-darker: #8c2d27;
 $desert-day-dark: #d14719;
 $desert-day-light: #f26628;
 $desert-day-lighter: #fe8a41;
+$desert-day-darker-faded: #8c2d27aa;
+$desert-day-dark-faded: #d14719aa;
+$desert-day-light-faded: #f26628aa;
+$desert-day-lighter-faded: #fe8a41aa;
 
 $desert-night-darker: #4d1832;
 $desert-night-dark: #5f0c38;
 $desert-night-light: #751441;
 $desert-night-lighter: #8d274c;
+$desert-night-darker-faded: #4d1832aa;
+$desert-night-dark-faded: #5f0c38aa;
+$desert-night-light-faded: #751441aa;
+$desert-night-lighter-faded: #8d274caa;
 
 $desert-sun-yellow: #fdc82e;
 $desert-sun-yellow-half: #fdc82e55;
@@ -51,7 +60,7 @@ $transition-time: 0s;
 
 body {
   background-color: #ffffff;
-  font-family: "Merriweather", serif;
+  font-family: "Bitter", serif;
   font-size: 0.9rem;
   padding: 0;
   margin: 0;
@@ -178,25 +187,32 @@ a {
 }
 
 #header-content {
-  background-color: $solarized-blue;
+  background-color: $solarized-blue-less-faded;
   color: $solarized-base02;
   display: flex;
   flex-direction: column;
-  grid-column-start: 2;
   height: 100%;
   justify-content: center;
   padding: 0 1rem;
   transition: color $transition-time;
   z-index: 50;
-}
-#header-content-inner {
-  border: 2px solid $solarized-base02;
-  height: 100%;
-  margin: 5px;
-  padding: 0.5rem;
+  position: relative;
+  top: 10px;
+  left: 10px;
 }
 .night #header-content {
   color: $solarized-base2;
+}
+#header-content-inner {
+  background-color: $desert-sky-lighter;
+  border: 1px solid $solarized-base0;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  z-index: 25;
+}
+.night #header-content-inner {
+  background-color: $desert-sky-darker;
 }
 #header-area {
   .name {
@@ -218,11 +234,14 @@ a {
 .header-grid-square {
   // backdrop-filter: blur(5px);
   // -webkit-backdrop-filter: blur(5px);
-  border: 1px solid #66666611;
+  border: 1px solid $desert-sky-lighter;
   border-radius: 5px;
   height: 16px;
   margin: 1px;
   width: 16px;
+}
+.night .header-grid-square {
+  border-color: #0a001e;
 }
 @keyframes fadeIn {
   0% {
@@ -242,13 +261,24 @@ a {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 .grid-square-active-0 {
-  background: $solarized-blue-faded;
+  background: $desert-day-dark-faded;
 }
 .grid-square-active-1 {
-  background: $solarized-cyan-faded;
+  background: $desert-day-light-faded;
 }
 .grid-square-active-2 {
-  background: $solarized-violet-faded;
+  background: $desert-day-darker-faded;
+}
+.night {
+  .grid-square-active-0 {
+    background: $desert-night-dark-faded;
+  }
+  .grid-square-active-1 {
+    background: $desert-night-lighter-faded;
+  }
+  .grid-square-active-2 {
+    background: $desert-night-light-faded;
+  }
 }
 #life-button-container {
   align-items: end;
@@ -258,7 +288,7 @@ a {
 }
 #life-button-container button {
   align-items: center;
-  background-color: $solarized-blue;
+  background-color: $desert-sky-lighter;
   border: none;
   border-radius: 3px;
   display: grid;
@@ -268,6 +298,9 @@ a {
   padding: 2px;
   width: 1.5rem;
   z-index: 1;
+}
+.night #life-button-container button {
+  background-color: $desert-sky-darker;
 }
 #life-button-container button:hover {
   background-color: $solarized-blue-faded;
@@ -349,7 +382,7 @@ a {
 #day-night-toggle {
   align-items: center;
   background-color: inherit;
-  border: 1px solid $solarized-blue;
+  border: 1px solid $solarized-blue-faded;
   border-radius: 7px;
   display: flex;
   padding: 2px;
@@ -477,7 +510,7 @@ a {
   ul {
     padding: 0;
     li {
-      border: 1px solid $solarized-blue;
+      border: 1px solid $solarized-blue-faded;
       list-style: none;
       margin: 0.5rem 0;
       transition: background-color 100ms ease-in;
@@ -485,7 +518,7 @@ a {
         background-color: $solarized-blue-faded;
       }
       &.selected {
-        background-color: $solarized-blue;
+        background-color: $solarized-blue-faded;
         color: black;
       }
       button {
@@ -493,7 +526,10 @@ a {
         border: none;
         font-family: inherit;
         font-size: 1.3rem;
+        left: 5px;
         padding: 0.5rem 0;
+        position: relative;
+        top: 5px;
         transition: color $transition-time;
         width: 100%;
       }

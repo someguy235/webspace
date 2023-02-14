@@ -136,9 +136,11 @@ const Header = () => {
         )}
       </div>
       <div id="header-content-container">
-        <div id="header-content">
-          <div className="name">Ethan Shepherd</div>
-          <div className="subname">software developer</div>
+        <div id="header-content-inner">
+          <div id="header-content">
+            <div className="name">Ethan Shepherd</div>
+            <div className="subname">software developer</div>
+          </div>
         </div>
         <div id="life-button-container">
           <button
