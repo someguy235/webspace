@@ -6,9 +6,11 @@ $solarized-base02: #073642;
 $solarized-base01: #586e75;
 $solarized-base00: #657b83;
 $solarized-base0: #839496;
+$solarized-base0-faded: #83949633;
 $solarized-base0-half: #83949655;
 $solarized-base0-trans: #83949600;
 $solarized-base1: #93a1a1;
+$solarized-base1-faded: #93a1a133;
 $solarized-base2: #eee8d5;
 $solarized-base3: #fdf6e3;
 $solarized-yellow: #b58900;
@@ -510,15 +512,18 @@ a {
   ul {
     padding: 0;
     li {
-      border: 1px solid $solarized-blue-faded;
+      background-color: #bbbbbb33;
+      border: 1px solid $solarized-base0-half;
       list-style: none;
       margin: 0.5rem 0;
       transition: background-color 100ms ease-in;
       &:hover {
         background-color: $solarized-blue-faded;
+        border: 1px solid $solarized-blue-faded;
       }
       &.selected {
         background-color: $solarized-blue-faded;
+        border: 1px solid $solarized-blue-faded;
         color: black;
       }
       button {
