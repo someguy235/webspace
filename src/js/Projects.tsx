@@ -43,7 +43,7 @@ const ProjectTitle = ({ project }: ProjectProps) => {
   return (
     <h3 className="project-title">
       {project.name
-        .map((name, i) =>
+        .map<React.ReactNode>((name, i) =>
           project.link[i] ? (
             <a
               href={project.link[i]}
@@ -57,7 +57,7 @@ const ProjectTitle = ({ project }: ProjectProps) => {
             name
           )
         )
-        .reduce((prev, curr) => prev + " / " + curr)}
+        .reduce((prev, curr) => [prev, " / ", curr])}
     </h3>
   );
 };
