@@ -146,6 +146,7 @@ const Header = () => {
           <button
             className={"life-play-button " + (lifeIsRunning ? "pause" : "play")}
             onClick={() => setLifeIsRunning(!lifeIsRunning)}
+            aria-label="play/pause game of life"
           >
             <div className="play-button-container">
               <div className="life-icon">
@@ -164,7 +165,11 @@ const Header = () => {
               </div>
             </div>
           </button>
-          <button className="life-reset-button" onClick={initLife}>
+          <button
+            className="life-reset-button"
+            onClick={initLife}
+            aria-label="reset game of life"
+          >
             <div className="reset-button-container">
               <div className="life-icon">
                 <img src={reset} alt="reset button" />

@@ -11,6 +11,8 @@ const About = () => {
         src={profile}
         title="Holmstead Ranch"
         alt="self portrait"
+        width="300"
+        height="260"
       />
       <p>
         Hi, I&apos;m Ethan Shepherd, a full-stack Java/JavaScript developer
@@ -49,21 +51,36 @@ const About = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={github_logo} alt="github logo" />
+            <img
+              src={github_logo}
+              alt="github logo"
+              width="48px"
+              height="62px"
+            />
           </a>
           <a
             href="http://stackoverflow.com/users/90276/ethan-shepherd"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={stack_logo} alt="stack overflow logo" />
+            <img
+              src={stack_logo}
+              alt="stack overflow logo"
+              width="48px"
+              height="62px"
+            />
           </a>
           <a
             href="http://www.linkedin.com/pub/ethan-shepherd/13/629/135"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={linkedin_logo} alt="linkedin logo" />
+            <img
+              src={linkedin_logo}
+              alt="linkedin logo"
+              width="48px"
+              height="62px"
+            />
           </a>
         </div>
       </div>

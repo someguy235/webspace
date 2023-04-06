@@ -22,6 +22,7 @@ $solarized-violet-faded: #6c71c433;
 $solarized-blue: #268bd2;
 $solarized-blue-faded: #268bd233;
 $solarized-blue-less-faded: #268bd2aa;
+$solarized-blue-luminous: #93c7eb;
 $solarized-blue-light: hsl(204.8, 69.4%, 80%);
 $solarized-cyan: #2aa198;
 $solarized-cyan-faded: #2aa19833;
@@ -305,7 +306,7 @@ a {
   background-color: $desert-sky-darker;
 }
 #life-button-container button:hover {
-  background-color: $solarized-blue-faded;
+  background-color: $solarized-blue-luminous;
 }
 .night #life-button-container button {
   color: $solarized-base2;
@@ -589,6 +590,11 @@ a {
   margin-bottom: 10px;
   width: 300px;
 }
+@media (max-width: $small-screen-break) {
+  #self-portrait {
+    box-shadow: none;
+  }
+}
 #about-badges-container,
 #about-contact-container {
   display: flex;
@@ -606,9 +612,10 @@ a {
   justify-content: space-evenly;
   width: 50%;
   img {
-    width: 3rem;
     border: 1px solid $solarized-base1;
     border-radius: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 .italic {

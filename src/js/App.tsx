@@ -1,5 +1,5 @@
-import { StrictMode, useEffect, useState } from "react";
-import { render } from "react-dom";
+import * as ReactDOMClient from "react-dom/client";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Menu from "./Menu";
@@ -38,9 +38,6 @@ const App = () => {
   );
 };
 
-render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  document.getElementById("root")
-);
+const container = document.getElementById("root");
+const root = ReactDOMClient.createRoot(container!);
+root.render(<App />);
