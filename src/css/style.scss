@@ -588,11 +588,14 @@ a {
   margin-left: 1rem;
   margin-right: 5px;
   margin-bottom: 10px;
-  width: 300px;
+  max-width: 300px;
 }
 @media (max-width: $small-screen-break) {
   #self-portrait {
     box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 99%;
   }
 }
 #about-badges-container,
@@ -642,15 +645,12 @@ a {
 }
 .project-tech {
   display: flex;
+  flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   span {
-    display: flex;
-    justify-content: center;
-    &:not(:first-of-type) {
-      margin-left: 1rem;
-    }
+    margin: 0.1rem 1rem 0.1rem 0;
   }
   img {
     height: 25px;

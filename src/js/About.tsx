@@ -11,8 +11,6 @@ const About = () => {
         src={profile}
         title="Holmstead Ranch"
         alt="self portrait"
-        width="300"
-        height="260"
       />
       <p>
         Hi, I&apos;m Ethan Shepherd, a full-stack Java/JavaScript developer
