@@ -67,7 +67,7 @@ const Experience = () => {
               >
                 Paleo DIVER
               </a>{" "}
-              [Java, Spring, iBatis, AngularJS, D3JS, ArcGIS API]
+              [Java, Spring, iBatis, React, D3JS, ArcGIS API]
             </span>
             : Paleoclimatology data search, access, and download via web UI or
             RESTful API.
