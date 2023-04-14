@@ -56,7 +56,7 @@ const About = () => {
               height="62px"
             />
           </a>
-          <a
+          {/* <a
             href="http://stackoverflow.com/users/90276/ethan-shepherd"
             target="_blank"
             rel="noreferrer"
@@ -67,7 +67,7 @@ const About = () => {
               width="48px"
               height="62px"
             />
-          </a>
+          </a> */}
           <a
             href="http://www.linkedin.com/pub/ethan-shepherd/13/629/135"
             target="_blank"
