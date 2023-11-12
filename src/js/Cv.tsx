@@ -41,16 +41,41 @@ const Experience = () => {
   return (
     <div id="cv-exp-section">
       <div className="cv-section-header">EXPERIENCE</div>
+
+      <div className="cv-exp-position">
+        <div className="cv-exp-header">
+          <div className="cv-exp-employer">
+            Lawrence Livermore National Laboratory
+          </div>
+          <div className="cv-exp-dates">October 2023 - Present</div>
+          <div className="cv-exp-title">
+            Web Software Engineer - National Ignition Facility
+          </div>
+          <div className="cv-exp-location">Livermore, CA</div>
+        </div>
+        <div className="cv-exp-summary">
+          Modernize optics and target diagnostics web applications.
+        </div>
+        <ul className="cv-exp-highlights">
+          <li>
+            <span className="cv-exp-highlight-title">
+              OIDV/SPLAT [Java, OracleAQ]
+            </span>
+            : Shot planning and optics analysis tools.
+          </li>
+        </ul>
+      </div>
+
       <div className="cv-exp-position">
         <div className="cv-exp-header">
           <div className="cv-exp-employer">
             National Centers for Environmental Information
           </div>
-          <div className="cv-exp-dates">June 2012 - Present</div>
+          <div className="cv-exp-dates">June 2012 - October 2023</div>
           <div className="cv-exp-title">
             Web/Applications Engineer - Station Metadata/Paleoclimatology Teams
           </div>
-          <div className="cv-exp-location">Asheville, NC</div>
+          <div className="cv-exp-location">Asheville, NC / Las Vegas, NV</div>
         </div>
         <div className="cv-exp-summary">
           Design and create Java/JavaScript web applications, REST web services,

@@ -90,7 +90,7 @@ const ProjectTech = ({ project }: ProjectProps) => {
         if (logoMap[tech]) {
           return (
             <span key={tech}>
-              <img src={logoMap[tech]} alt={tech} title={tech} />
+              <img src={logoMap[tech]} alt={tech} title={tech} loading="lazy" />
             </span>
           );
         } else {
@@ -123,6 +123,7 @@ const ProjectImg = ({ project }: ProjectProps) => {
             src={projectImages[img.src]}
             title={img.alt}
             alt={img.alt}
+            loading="lazy"
           />
         </div>
       ))}
