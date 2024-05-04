@@ -59,9 +59,15 @@ const Experience = () => {
         <ul className="cv-exp-highlights">
           <li>
             <span className="cv-exp-highlight-title">
-              OIDV/SPLAT [Java, OracleAQ]
+              BLM/SLM Calc [Spring/Boot, OracleAQ, Docker]
             </span>
-            : Shot planning and optics analysis tools.
+            : Extract and modernize optics blocker and shadow calculation code.
+          </li>
+          <li>
+            <span className="cv-exp-highlight-title">
+              Optics Loop Tool [Spring/Boot, React, Oracle]
+            </span>
+            : Refactor legacy web application for optics flaw review.
           </li>
         </ul>
       </div>
@@ -301,7 +307,9 @@ const CV = () => {
       <Education />
       <Pubs />
       <div className="resume-link">
-        <a href="./Shepherd - Resume.pdf">Shepherd - Resume.pdf</a>
+        <a href="./Shepherd - Resume.pdf" target="_blank">
+          Shepherd - Resume.pdf
+        </a>
       </div>
     </div>
   );
