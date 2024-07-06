@@ -3,7 +3,10 @@ import linkedin_logo from "../img/logos/linkedin.png";
 import stack_logo from "../img/logos/stackoverflow.png";
 import profile from "../img/profile-3.jpg";
 
-const About = () => {
+type AboutProps = {
+  mode: string;
+};
+const About = ({ mode }: AboutProps) => {
   return (
     <section id="about-section">
       <img

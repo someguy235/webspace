@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-// import { CSSTransition, SwitchTransition } from "react-transition-group";
 import play from "../img/controls/play.png";
 import play_night from "../img/controls/play-night.png";
 import pause from "../img/controls/pause.png";
 import pause_night from "../img/controls/pause-night.png";
 import reset from "../img/controls/reset.png";
 import reset_night from "../img/controls/reset-night.png";
+
+import Star from "./Star";
 
 function useInterval(callback: Function, delay: number | null) {
   const savedCallback = useRef<Function>();
@@ -36,13 +37,16 @@ type HeaderSquareParams = {
   active: boolean;
 };
 const HeaderSquare = ({ i, active }: HeaderSquareParams) => {
+  // const scale = Math.max(Math.random() * 0.2, 0.1);
+  const scale = 0.2;
   return (
     <div
       className={
-        "header-grid-square" +
-        (active ? ` grid-square-active grid-square-active-${i}` : "")
+        "header-grid-square" + (active ? " header-grid-square-active" : "")
       }
-    ></div>
+    >
+      <Star scale={scale} xPos={"0"} yPos={"0"} index={i} />
+    </div>
   );
 };
 
@@ -73,7 +77,7 @@ const Header = () => {
         return newLife;
       });
     },
-    lifeIsRunning ? 1000 : null
+    lifeIsRunning ? 300 : null
   );
 
   const checkArea = (x: number, y: number, a: boolean[][]) => {
@@ -117,21 +121,11 @@ const Header = () => {
       <div id="header-grid">
         {lifeArray.map((e, i) =>
           e.map((f, j) => (
-            // <SwitchTransition key={i + 1 * j + 1} mode="out-in">
-            //   <CSSTransition
-            //     key={f}
-            //     classNames={{
-            //       enter: "grid-square-enter",
-            //     }}
-            //     timeout={200}
-            //   >
             <HeaderSquare
-              i={(i + 1 * j + 1) % 3}
+              i={(i + 1 * j + 1) % 4}
               active={f}
               key={i + 1 * j + 1}
             />
-            //   </CSSTransition>
-            // </SwitchTransition>
           ))
         )}
       </div>

@@ -6,7 +6,6 @@ const Contact = () => {
         <div className="cv-tagline">Full Stack Java/JavaScript Developer</div>
       </div>
       <div className="cv-contact-info">
-        <div className="cv-phone">(828) 242 0036</div>
         <div className="cv-email">ethan.m.shepherd@gmail.com</div>
         <div className="cv-website">ethanshepherd.com</div>
       </div>

@@ -4,17 +4,18 @@ import CV from "./Cv";
 
 type SectionsParams = {
   section: string;
+  mode: string;
 };
-const Sections = ({ section }: SectionsParams) => {
+const Sections = ({ section, mode }: SectionsParams) => {
   switch (section) {
     case "about":
-      return <About />;
+      return <About mode={mode} />;
     case "projects":
       return <Projects />;
     case "cv":
       return <CV />;
     default:
-      return <About />;
+      return <About mode={mode} />;
   }
 };
 

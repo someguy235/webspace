@@ -21,7 +21,7 @@ $solarized-violet: #6c71c4;
 $solarized-violet-faded: #6c71c433;
 $solarized-blue: #268bd2;
 $solarized-blue-faded: #268bd233;
-$solarized-blue-less-faded: #268bd2aa;
+$solarized-blue-less-faded: #268bd2ee;
 $solarized-blue-luminous: #93c7eb;
 $solarized-blue-light: hsl(204.8, 69.4%, 80%);
 $solarized-cyan: #2aa198;
@@ -31,8 +31,12 @@ $solarized-green: #859900;
 /* $desert-sky-darker: #120036; */
 $desert-sky-darker: #0a001e;
 $desert-sky-dark: #4745ba;
+$desert-sky-darker-faded: #0a001edd;
+$desert-sky-dark-faded: #4745badd;
 $desert-sky-light: #89dddc;
 $desert-sky-lighter: #f0f0f0;
+$desert-sky-light-faded: #89dddcdd;
+$desert-sky-lighter-faded: #f0f0f0dd;
 
 $desert-day-darker: #8c2d27;
 $desert-day-dark: #d14719;
@@ -56,10 +60,19 @@ $desert-sun-yellow: #fdc82e;
 $desert-sun-yellow-half: #fdc82e55;
 $desert-sun-yellow-faded: #fdc82e00;
 
+// #2CE8D9, 44, 232, 217 (turquoise) 175, 80%, 54%
+// #CB8FFF, 203, 143, 255 (lavendar) 272, 100%, 78%
+// #EA9ECD, 234, 158, 205 (lavendar pink) 323, 64%, 77%
+// #F5DC6E, 245, 220, 110 (jasmine) 49, 87%, 70%
+$star-turquoise: hsl(175, 80%, 54%);
+$star-lavendar: hsl(272, 100%, 78%);
+$star-pink: hsl(323, 64%, 77%);
+$star-jasmine: hsl(49, 87%, 70%);
+
 $medium-screen-break: 1100px;
 $small-screen-break: 768px;
 
-$transition-time: 0s;
+$transition-time: 0.3s;
 
 body {
   background-color: #ffffff;
@@ -81,8 +94,8 @@ a {
 #content {
   display: grid;
   grid-column-gap: 3%;
-  row-gap: 50px;
-  grid-template-rows: 100px calc(100vh - 300px) 100px;
+  // row-gap: 50px;
+  grid-template-rows: 150px calc(100vh - 300px) 150px;
   grid-template-columns: auto minmax(200px, 300px) minmax(800px, 1000px) auto;
   grid-template-areas:
     "header header header header"
@@ -98,7 +111,7 @@ a {
 @media (max-width: $small-screen-break) {
   #content {
     grid-template-columns: 10% auto 10%;
-    grid-template-rows: 100px 10vh calc(90vh - 260px) 100px;
+    grid-template-rows: 100px 10vh calc(90vh - 310px) 150px;
     grid-template-areas:
       "header header header"
       ". nav ."
@@ -135,7 +148,9 @@ a {
   background: linear-gradient(
     0deg,
     $desert-sky-light 0,
-    $desert-sky-lighter 100px
+    $desert-sky-lighter 50px,
+    $desert-sky-lighter calc(100vh - 200px),
+    $desert-sky-light 100%
   );
   display: grid;
   grid-row-start: 1;
@@ -147,7 +162,9 @@ a {
   background: linear-gradient(
     0deg,
     $desert-sky-dark 0,
-    $desert-sky-darker 100px
+    $desert-sky-darker 50px,
+    $desert-sky-darker calc(100vh - 200px),
+    $desert-sky-dark 100%
   );
   display: grid;
   grid-row-start: 1;
@@ -157,10 +174,140 @@ a {
   z-index: -1;
   transition: opacity $transition-time;
 }
+.stars {
+  display: relative;
+}
+.star {
+  display: inline-block;
+  position: absolute;
+  opacity: 75%;
+}
+@keyframes starsOn {
+  0% {
+    background-size: 0 0;
+    opacity: 0%;
+  }
+  50% {
+    background-size: 0 0;
+    opacity: 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+    opacity: 100%;
+  }
+}
+@keyframes starsOff {
+  from {
+    background-size: 100% 100%;
+  }
+  to {
+    background-size: 0 0;
+  }
+}
+.day .star {
+  animation-name: starsOff;
+  animation-duration: $transition-time;
+  background-repeat: no-repeat;
+}
+.night .star {
+  animation-name: starsOn;
+  animation-duration: calc($transition-time * 2);
+  background-repeat: no-repeat;
+}
+#header-area .star {
+  animation: none;
+}
+.night .star-turquoise {
+  background: radial-gradient(
+    circle,
+    hsla(173, 80%, 70%, 100%) 0%,
+    hsla(173, 80%, 100%, 0%) 75%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.night .star-lavendar {
+  background: radial-gradient(
+    circle,
+    hsla(272, 100%, 70%, 100%) 0%,
+    hsla(272, 100%, 100%, 0%) 75%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.night .star-pink {
+  background: radial-gradient(
+    circle,
+    hsla(323, 64%, 70%, 100%) 0%,
+    hsla(323, 64%, 100%, 0%) 75%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.night .star-jasmine {
+  background: radial-gradient(
+    circle,
+    hsla(49, 87%, 70%, 100%) 0%,
+    hsla(49, 87%, 100%, 0%) 75%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes sunmoonrise {
+  from {
+    top: 200;
+    bottom: -40;
+  }
+  to {
+    top: 10;
+    bottom: 100;
+  }
+}
+@keyframes sunmoonset {
+  from {
+    top: 10;
+    bottom: 100;
+  }
+  to {
+    top: 200;
+    bottom: -40;
+  }
+}
+#moon-large,
+#sun-large {
+  display: inline-block;
+  position: absolute;
+  top: 10;
+  left: 450;
+}
+.night #moon-large {
+  animation: sunmoonrise $transition-time;
+}
+.night #sun-large {
+  animation: sunmoonset $transition-time;
+}
+.day #moon-large {
+  animation: sunmoonset $transition-time;
+}
+.day #sun-large {
+  animation: sunmoonrise $transition-time;
+}
 
 /**********/
 /* Header */
 /**********/
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+      0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  }
+}
 
 #header-area {
   grid-area: header;
@@ -170,11 +317,13 @@ a {
   top: 0;
   width: 100%;
   height: 100px;
+  padding-bottom: 0.5rem;
 }
 #header-content-container {
   display: grid;
   grid-column-gap: 3%;
   grid-template-columns: auto minmax(200px, 300px) minmax(800px, 1000px) auto;
+  padding-top: 0.5rem;
   width: 100%;
 }
 @media (max-width: $medium-screen-break) {
@@ -189,8 +338,36 @@ a {
   }
 }
 
+@keyframes neonOn {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: none;
+  }
+  55% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+  60% {
+    text-shadow: none;
+  }
+  65% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+  70% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+}
+
 #header-content {
   background-color: $solarized-blue-less-faded;
+  // background-color: $solarized-blue-faded;
   color: $solarized-base02;
   display: flex;
   flex-direction: column;
@@ -205,17 +382,23 @@ a {
 }
 .night #header-content {
   color: $solarized-base2;
+  animation-name: neonOn, neon2;
+  animation-duration: calc($transition-time * 2), 1.5s;
+  animation-delay: 0s, calc($transition-time * 2);
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+  box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #228dff,
+    0 0 7px #228dff, 0 0 8px #228dff, 0 0 10px #228dff, 0 0 15px #228dff;
 }
 #header-content-inner {
-  background-color: $desert-sky-lighter;
+  background-color: #00000000;
   border: 1px solid $solarized-base0;
   display: flex;
   flex-direction: column;
   grid-column-start: 2;
+  transition: background-color $transition-time;
   z-index: 25;
-}
-.night #header-content-inner {
-  background-color: $desert-sky-darker;
 }
 #header-area {
   .name {
@@ -223,6 +406,7 @@ a {
   }
   .subname {
     font-size: 1em;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -235,18 +419,19 @@ a {
   width: 100%;
 }
 .header-grid-square {
-  // backdrop-filter: blur(5px);
-  // -webkit-backdrop-filter: blur(5px);
-  border: 1px solid $desert-sky-lighter;
+  border: 1px solid #00000000;
   border-radius: 5px;
   height: 16px;
+  position: relative;
   margin: 1px;
   width: 16px;
+  opacity: 0;
+  transition: opacity $transition-time;
 }
-.night .header-grid-square {
-  border-color: #0a001e;
+.header-grid-square-active {
+  opacity: 1;
 }
-@keyframes fadeIn {
+@keyframes gridSquarefadeIn {
   0% {
     opacity: 0;
   }
@@ -254,12 +439,8 @@ a {
     opacity: 1;
   }
 }
-.grid-square-enter {
-  animation: fadeIn 500ms;
-}
 .grid-square-active {
-  // backdrop-filter: blur(5px);
-  // -webkit-backdrop-filter: blur(5px);
+  animation: gridSquarefadeIn $transition-time;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
@@ -299,6 +480,7 @@ a {
   height: 1.5rem;
   margin-left: 5px;
   padding: 2px;
+  transition: background-color $transition-time;
   width: 1.5rem;
   z-index: 1;
 }
@@ -368,7 +550,7 @@ a {
   grid-area: footer;
   grid-template-columns: auto 800px auto;
   grid-template-rows: auto;
-  height: 100px;
+  height: 150px;
   width: 100%;
 }
 @media (max-width: 800px) {
@@ -425,26 +607,34 @@ a {
 #footer-area {
   #day-ground {
     background: url("../img/desert-ground-day.png");
-    background-size: 100% 100%;
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    background-position: bottom;
     grid-column-start: 2;
     grid-row-start: 1;
     transition: opacity $transition-time;
+    position: relative;
+    overflow: hidden;
   }
   #night-ground {
     background: url("../img/desert-ground-night.png");
-    background-size: 100% 100%;
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    background-position: bottom;
     grid-column-start: 2;
     grid-row-start: 1;
     transition: opacity $transition-time;
+    position: relative;
+    overflow: hidden;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: $small-screen-break) {
   #footer-area {
     #day-ground {
-      background-size: 800px;
+      background-size: 800px 100px;
     }
     #night-ground {
-      background-size: 800px;
+      background-size: 800px 100px;
     }
   }
 }
@@ -454,8 +644,12 @@ a {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-rows: 43% 5% 21% 19% 12%;
+  grid-template-rows: 50px 100px;
   transition: opacity $transition-time;
+  .footer-ground {
+    display: grid;
+    grid-template-rows: 43% 5% 21% 19% 12%;
+  }
 }
 .footer-right {
   display: grid;
@@ -463,8 +657,12 @@ a {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-rows: 51% 0 19% 11% 19%;
+  grid-template-rows: 50px 100px;
   transition: opacity $transition-time;
+  .footer-ground {
+    display: grid;
+    grid-template-rows: 51% 0 19% 11% 19%;
+  }
 }
 .footer-side-day {
   .desert-sky {
@@ -543,6 +741,13 @@ a {
     }
   }
 }
+.night #menu-area ul li {
+  &.selected {
+    button {
+      animation: neon2 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
 .night #menu-area ul li button {
   color: $solarized-base2;
 }
@@ -569,6 +774,24 @@ a {
 #sections-area {
   grid-area: content;
   overflow: auto;
+  scrollbar-color: grey transparent;
+}
+
+#about-section {
+  background-color: $desert-sky-lighter;
+  transition: background-color $transition-time;
+}
+.night #about-section {
+  background-color: $desert-sky-darker;
+}
+#projects-section,
+#cv-section {
+  background-color: $desert-sky-lighter;
+  transition: background-color $transition-time;
+}
+.night #projects-section,
+.night #cv-section {
+  background-color: $desert-sky-darker;
 }
 
 /*********/
