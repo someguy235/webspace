@@ -822,9 +822,8 @@ a {
 @media (max-width: $small-screen-break) {
   #self-portrait {
     box-shadow: none;
-    margin-left: 0;
     margin-right: 0;
-    width: 99%;
+    max-width: 200px;
   }
 }
 #about-badges-container,
