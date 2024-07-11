@@ -281,6 +281,12 @@ a {
   top: 10;
   left: 450;
 }
+@media (max-width: $small-screen-break) {
+  #moon-large,
+  #sun-large {
+    left: 150;
+  }
+}
 .night #moon-large {
   animation: sunmoonrise $transition-time;
 }
