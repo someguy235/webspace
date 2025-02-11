@@ -29,7 +29,7 @@ const Skills = () => {
         </div>
         <div className="cv-skills-title">Other</div>
         <div className="cv-skills-list">
-          Oracle, iBatis, MongoDB, Selenium, Cypress, Git/SVN, Linux
+          Oracle, iBatis, MongoDB, Selenium, Cypress, Git/SVN, Docker
         </div>
       </div>
     </div>
@@ -64,9 +64,15 @@ const Experience = () => {
           </li>
           <li>
             <span className="cv-exp-highlight-title">
-              Optics Loop Tool [Spring/Boot, React, Oracle]
+              Optics Loop Tool [Spring/Boot, React, Oracle, Docker]
             </span>
             : Refactor legacy web application for optics flaw review.
+          </li>
+          <li>
+            <span className="cv-exp-highlight-title">
+              OIDV [Spring/Boot, React, Oracle, Docker]
+            </span>
+            : Refactor legacy web application for optics image inspection.
           </li>
         </ul>
       </div>
@@ -194,8 +200,8 @@ const Experience = () => {
             </span>
             : Initiated the use of BitTorrent at NCDC. Proposal to management,
             software evaluation, performance testing, and writing operational
-            scripts. Presented results at the 2009 American Geophysical Union
-            annual meeting.
+            scripts. Presented at the 2009 American Geophysical Union
+            conference.
           </li>
         </ul>
       </div>
