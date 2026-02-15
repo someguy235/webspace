@@ -19,7 +19,7 @@ const App = () => {
   }, []);
 
   const getStars = () => {
-    const stars: JSX.Element[] = [];
+    const stars: React.JSX.Element[] = [];
     for (let i = 0; i < 50; i++) {
       const scale = Math.max(0.25, Math.random()) * 0.25;
       const xPos = Math.floor(Math.random() * w) + "px";

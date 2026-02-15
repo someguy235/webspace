@@ -1,27 +1,27 @@
 import _projects from "../data/projects.json";
 const projects = _projects as Project[];
 
-import android_logo from "../img/logos/android.png";
-import angularjs_logo from "../img/logos/angularjs.png";
-import d3_logo from "../img/logos/d3.png";
-import express_logo from "../img/logos/express.png";
-import grails_logo from "../img/logos/grails.png";
-import groovy_logo from "../img/logos/groovy.png";
-import jquery_logo from "../img/logos/jquery.png";
-import js_logo from "../img/logos/javascript.png";
-import leaflet_logo from "../img/logos/leaflet.png";
-import mongo_logo from "../img/logos/mongo.png";
-import node_logo from "../img/logos/node.png";
-import opencv_logo from "../img/logos/opencv.png";
-import passport_logo from "../img/logos/passport.png";
-import postgres_logo from "../img/logos/postgres.png";
-import python_logo from "../img/logos/python.png";
-import react_logo from "../img/logos/react.png";
-import ts_logo from "../img/logos/typescript.png";
-import vue_logo from "../img/logos/vue.png";
+import android_logo from "url:../img/logos/android.png";
+import angularjs_logo from "url:../img/logos/angularjs.png";
+import d3_logo from "url:../img/logos/d3.png";
+import express_logo from "url:../img/logos/express.png";
+import grails_logo from "url:../img/logos/grails.png";
+import groovy_logo from "url:../img/logos/groovy.png";
+import jquery_logo from "url:../img/logos/jquery.png";
+import js_logo from "url:../img/logos/javascript.png";
+import leaflet_logo from "url:../img/logos/leaflet.png";
+import mongo_logo from "url:../img/logos/mongo.png";
+import node_logo from "url:../img/logos/node.png";
+import opencv_logo from "url:../img/logos/opencv.png";
+import passport_logo from "url:../img/logos/passport.png";
+import postgres_logo from "url:../img/logos/postgres.png";
+import python_logo from "url:../img/logos/python.png";
+import react_logo from "url:../img/logos/react.png";
+import ts_logo from "url:../img/logos/typescript.png";
+import vue_logo from "url:../img/logos/vue.png";
 
 //eslint-disable-next-line
-import * as projectImages from "../img/imagecompressor/*.png";
+import * as projectImages from "url:../img/imagecompressor/*.png";
 
 type Project = {
   id: string;

@@ -1,7 +1,6 @@
-import github_logo from "../img/logos/github.png";
-import linkedin_logo from "../img/logos/linkedin.png";
-import stack_logo from "../img/logos/stackoverflow.png";
-import profile from "../img/profile-3.jpg";
+import github_logo from "url:../img/logos/github.png";
+import linkedin_logo from "url:../img/logos/linkedin.png";
+import profile from "url:../img/profile-3.jpg";
 
 type AboutProps = {
   mode: string;
@@ -17,9 +16,9 @@ const About = ({ mode }: AboutProps) => {
       />
       <p>
         Hi, I&apos;m Ethan Shepherd, a full-stack Java/JavaScript developer
-        building web and science data applications in the California Bay Area.
-        I&apos;ve worked on everything from satellite data products using C and
-        Fortran, to Spring MVC apps on Oracle, to SPAs with Node, Mongo,
+        building web and science data applications in the San Francisco Bay
+        Area. I&apos;ve worked on everything from satellite data products using
+        C and Fortran, to Spring MVC apps on Oracle, to SPAs with Node, Mongo,
         Angular, and React.
       </p>
       <p>
@@ -64,18 +63,6 @@ const About = ({ mode }: AboutProps) => {
               height="62px"
             />
           </a>
-          {/* <a
-            href="http://stackoverflow.com/users/90276/ethan-shepherd"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={stack_logo}
-              alt="stack overflow logo"
-              width="48px"
-              height="62px"
-            />
-          </a> */}
           <a
             href="http://www.linkedin.com/pub/ethan-shepherd/13/629/135"
             target="_blank"

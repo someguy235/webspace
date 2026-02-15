@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import play from "../img/controls/play.png";
-import play_night from "../img/controls/play-night.png";
-import pause from "../img/controls/pause.png";
-import pause_night from "../img/controls/pause-night.png";
-import reset from "../img/controls/reset.png";
-import reset_night from "../img/controls/reset-night.png";
+import play from "url:../img/controls/play.png";
+import play_night from "url:../img/controls/play-night.png";
+import pause from "url:../img/controls/pause.png";
+import pause_night from "url:../img/controls/pause-night.png";
+import reset from "url:../img/controls/reset.png";
+import reset_night from "url:../img/controls/reset-night.png";
 
 import Star from "./Star";
 
 function useInterval(callback: Function, delay: number | null) {
-  const savedCallback = useRef<Function>();
+  const savedCallback = useRef<Function>(null);
 
   // Remember the latest callback.
   useEffect(() => {

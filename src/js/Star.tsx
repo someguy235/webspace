@@ -5,7 +5,6 @@ type StarProps = {
   index: number;
 };
 const Star = ({ scale, xPos, yPos, index }: StarProps) => {
-  console.log(index);
   const fillColors = [
     "hsl(173, 80%, 54%)",
     "hsl(323, 64%, 77%)",
