@@ -1,7 +1,7 @@
 [
   {
     "name": ["Ranger"],
-    "link": ["https://www.ethanshepherd.com/ranger/?user=ems"],
+    "link": [""],
     "tech": ["VueJS", "LeafletJS", "PassportJS", "MongoDB", "Express"],
     "github": "http://github.com/someguy235/ranger",
     "img": [
@@ -14,7 +14,7 @@
   },
   {
     "name": ["SetListr"],
-    "link": ["https://www.ethanshepherd.com/setlistr"],
+    "link": [""],
     "tech": ["ReactJS", "TypeScript", "NodeJS", "MongoDB", "Express"],
     "github": "http://github.com/someguy235/setlistr",
     "img": [
